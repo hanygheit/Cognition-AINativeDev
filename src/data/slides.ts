@@ -168,11 +168,22 @@ And ownership is not an abstract leadership word. It means owning a concrete set
   {
     id: 16,
     slug: "monday-morning",
-    title: "Monday Morning: Five Moves",
+    title: "Your AI-Native Starting Playbook",
     durationSeconds: 105,
     theme: "paper",
-    notes:
-      "Ask for one bounded workflow, not a transformation programme. Move one is the only one that matters this week.",
+    notes: `You do not need to redesign your entire engineering organization tomorrow. Start with one real, bounded task—something useful enough to matter, but small enough to verify.
+
+Define the acceptance criteria before the agent starts. Make the repository context explicit: architecture, conventions, contracts, security policies, and Definition of Done.
+
+Put automated evidence before human attention. Run tests, scans, contract checks, and policy checks before asking an engineer to review the result.
+
+Then measure whether delivery improved. Do not measure generated lines. Measure cycle time, review effort, rework, escaped defects, and change-failure rate.
+
+AI-native transformation begins with one improved workflow—not maximum autonomy.
+
+These five moves improve the workflow. But they also redefine your role—because someone still has to own the outer loops.
+
+You are the orchestrator—not the typist.`,
   },
   {
     id: 17,
