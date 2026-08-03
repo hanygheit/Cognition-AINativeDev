@@ -8,10 +8,10 @@ Themes are set per slide in `src/data/slides.ts` and applied by `SlideFrame` as 
 
 | Theme | Used by | Role |
 | --- | --- | --- |
-| `paper` | 14 slides | Default. Warm white editorial surface. |
-| `dark` | slide 1 and slide 17's footer band | Hero and punctuation only. |
+| `paper` | 15 slides | Default. Warm white editorial surface. |
+| `dark` | slide 1 and slide 18's footer band | Hero and punctuation only. |
 | `ink` | slide 14 | One mid-deck contrast beat. |
-| `signal` | slide 17 | Amber close. |
+| `signal` | slide 18 | Amber close. |
 
 Keep the deck **mostly light**. Adding a fourth dark slide requires a reason written into this file.
 

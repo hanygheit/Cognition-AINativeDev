@@ -9,7 +9,7 @@ The single source of truth for *what this deck says*. Change this file first whe
 | Title | AI-Native Development: From Writing Code to Owning the Full SDLC |
 | Speaker | Hany Saad — Senior Engineering Manager, ITWorx |
 | Event | CognitionX Egypt, 3 August 2026 |
-| Length | 28:45 planned, 17 slides |
+| Length | 30:00 planned, 18 slides |
 | Audience | Mixed-seniority engineers, tech leads, engineering managers |
 
 ## Approved thesis
@@ -50,9 +50,10 @@ Every slide must visibly serve this thesis. If a slide can be removed without we
 | 14 | `change-assurance` | Code review → change assurance. |
 | 15 | `engineer-stack` | A layered skills model from software fundamentals to end-to-end ownership. |
 | 16 | `monday-morning` | Five concrete actions. |
-| 17 | `own-the-outer-loops` | Close on the thesis, then stop. |
+| 17 | `agent-ready-project-structure` | Makes the agent operating layer concrete through versioned instructions, custom agents, skills, hooks, tools, and verification gates. |
+| 18 | `own-the-outer-loops` | Close on the thesis, then stop. |
 
-**Do not** add, remove, reorder, or materially rewrite these 17 slides without explicit approval from the speaker.
+**Do not** add, remove, reorder, or materially rewrite these 18 slides without explicit approval from the speaker.
 
 ## Evidence rules
 

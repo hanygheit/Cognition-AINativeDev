@@ -56,5 +56,6 @@ Base delay `0ms`, step `70–110ms`, hard cap `900ms` for the last element. Slid
 | 13 | Requirement → assurance groups in order → release decision → pull line |
 | 14 | Assurance layers reveal top to bottom, quote last |
 | 15 | Title → subtitle → six skill layers in order → learning-path panel |
-| 16 | Five moves in order, aside and measurement strip last |
-| 17 | Eyebrow → thesis → secondary → closing quote → footer band |
+| 16 | Title and five move labels → supporting lines → operating mode → repository context → measurement strip |
+| 17 | Title and lead → repository root → five agent-configuration layers → readiness questions → pull line |
+| 18 | Eyebrow → thesis → secondary → closing quote → footer band |

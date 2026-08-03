@@ -20,6 +20,7 @@ import { Slide13AssuranceStack } from "./Slide13AssuranceStack";
 import { Slide14EngineerStack } from "./Slide14EngineerStack";
 import { Slide15Monday } from "./Slide15Monday";
 import { Slide16Close } from "./Slide16Close";
+import { Slide17ProjectStructure } from "./Slide17ProjectStructure";
 
 const slideComponents: Record<number, ComponentType> = {
   1: Slide02Title,
@@ -38,7 +39,8 @@ const slideComponents: Record<number, ComponentType> = {
   14: Slide13AssuranceStack,
   15: Slide14EngineerStack,
   16: Slide15Monday,
-  17: Slide16Close,
+  17: Slide17ProjectStructure,
+  18: Slide16Close,
 };
 
 type RenderSlideProps = Readonly<{

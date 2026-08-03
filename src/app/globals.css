@@ -1940,7 +1940,150 @@ a:focus-visible {
 }
 .metric-grid span + span { border-left: 1px solid rgb(255 255 255 / 0.16); }
 
-/* Slide 17 — Close */
+/* Slide 17 — Agent-ready project structure */
+.agent-structure-slide { --reveal-duration: 300ms; }
+.agent-structure-slide header { margin-bottom: 1.1cqw; }
+.agent-structure-layout {
+  display: grid;
+  min-height: 0;
+  flex: 1;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: stretch;
+  gap: 3.2cqw;
+}
+.repository-map {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+}
+.repository-root {
+  display: flex;
+  align-items: center;
+  gap: 1cqw;
+  min-height: 3.2cqw;
+  padding: 0 0.75cqw 0.72cqw;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.repository-root strong {
+  color: var(--heading);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.35cqw;
+}
+.repository-root span {
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9cqw;
+  text-transform: uppercase;
+}
+.repository-groups {
+  position: relative;
+  display: grid;
+  min-height: 0;
+  flex: 1;
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  margin: 0;
+  padding: 0 0 0 2.1cqw;
+  list-style: none;
+}
+.repository-groups::before {
+  position: absolute;
+  top: 0;
+  bottom: 2.55cqw;
+  left: 0.82cqw;
+  width: 1px;
+  background: var(--rule-strong);
+  content: "";
+}
+.repository-group {
+  position: relative;
+  display: grid;
+  min-height: 0;
+  grid-template-columns: 7.1cqw minmax(0, 1fr) 14.7cqw;
+  align-items: center;
+  gap: 0.8cqw;
+  border-bottom: 1px solid var(--rule);
+}
+.repository-group::before {
+  position: absolute;
+  top: 50%;
+  left: -1.28cqw;
+  width: 1.28cqw;
+  height: 1px;
+  background: var(--rule-strong);
+  content: "";
+}
+.structure-role {
+  color: var(--structure);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9cqw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.structure-path { min-width: 0; }
+.structure-path > strong {
+  display: block;
+  color: var(--heading);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.12cqw;
+  line-height: 1.1;
+}
+.repository-group:first-child .structure-path > strong { color: var(--signal-ink); }
+.structure-children {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.14cqw 0.65cqw;
+  margin-top: 0.28cqw;
+}
+.structure-children span {
+  color: var(--steel);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9cqw;
+  line-height: 1.2;
+}
+.repository-group > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95cqw;
+  line-height: 1.2;
+}
+.agent-readiness {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2cqw;
+  border-left: 1px solid var(--rule-strong);
+}
+.agent-readiness > p {
+  margin: 0 0 0.85cqw;
+  color: var(--muted);
+  font-size: 1cqw;
+}
+.agent-readiness ol {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--rule);
+  list-style: none;
+}
+.agent-readiness li {
+  display: grid;
+  grid-template-columns: 2.4cqw minmax(0, 1fr);
+  align-items: center;
+  min-height: 3.6cqw;
+  border-top: 1px solid var(--rule);
+}
+.agent-readiness li span {
+  color: var(--signal-ink);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9cqw;
+}
+.agent-readiness li strong {
+  color: var(--heading);
+  font-size: 1.15cqw;
+  font-weight: 600;
+}
+.agent-structure-pull { margin-top: 1cqw; }
+
+/* Slide 18 — Close */
 .close-slide { display: flex; flex-direction: column; justify-content: center; padding-bottom: 12.5cqw; }
 .close-slide .eyebrow { color: rgb(20 25 34 / 0.72); }
 .close-slide h1 { max-width: 70cqw; font-size: 4.5cqw; }

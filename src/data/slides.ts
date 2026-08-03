@@ -187,6 +187,20 @@ You are the orchestrator—not the typist.`,
   },
   {
     id: 17,
+    slug: "agent-ready-project-structure",
+    title: "A Project Structure for Coding Agents",
+    durationSeconds: 75,
+    theme: "paper",
+    notes: `This is the structure I mean: not the application architecture, but the agent operating layer. Keep always-on instructions at the root, path-specific instructions under .github/instructions, custom agent profiles under .github/agents, reusable skills as folders containing SKILL.md, and deterministic lifecycle checks under .github/hooks. MCP configuration and verification scripts give agents controlled access and a repeatable evidence path.
+
+This is one GitHub-compatible sample, not a universal standard. Codex, Claude Code, and other runtimes use different discovery paths, so adapt the paths while preserving the layers: instructions, roles, capabilities, guardrails, tools, and evidence.
+
+The objective is to version these assets with the code, review them like code, and make agent behavior repeatable across people and sessions.
+
+Once this operating layer is in the repository, the agent can execute more reliably—but the engineer still owns the outer loops.`,
+  },
+  {
+    id: 18,
     slug: "own-the-outer-loops",
     title: "Own the Outer Loops",
     durationSeconds: 60,
