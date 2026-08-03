@@ -52,8 +52,8 @@ Base delay `0ms`, step `70–110ms`, hard cap `900ms` for the last element. Slid
 | 9 | Artifact rows reveal one by one |
 | 10 | Request → questions → acceptance strip |
 | 11 | Plan column → redline column → delegation contract |
-| 12 | Evidence items in order → release status → pull line |
+| 12 | Requirement → assurance groups in order → release decision → pull line |
 | 13 | Assurance layers reveal top to bottom, quote last |
-| 14 | Capability stem → capability top → roles |
+| 14 | Title → subtitle → six skill layers in order → learning-path panel |
 | 15 | Five moves in order, aside and measurement strip last |
 | 16 | Eyebrow → thesis → secondary → closing quote → footer band |

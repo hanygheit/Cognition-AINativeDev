@@ -1,48 +1,110 @@
+import {
+  Compass,
+  Code2,
+  GitPullRequest,
+  MessageSquareCode,
+  Network,
+  ShieldCheck,
+} from "lucide-react";
+
 import { revealDelay } from "@/lib/utils";
 
-const capabilities = [
-  "Problem and product framing",
-  "Architecture and trade-offs",
-  "Testing and verification",
-  "Security and operational awareness",
-  "Domain knowledge",
-  "Orchestration and communication",
+const skillLayers = [
+  {
+    level: "01",
+    title: "Software Fundamentals",
+    capabilities: "Programming · OOP · data structures · APIs · databases · debugging · Git",
+    icon: Code2,
+    tone: "foundation",
+  },
+  {
+    level: "02",
+    title: "Engineering Practice",
+    capabilities: "Testing · code review · CI/CD · secure coding · observability",
+    icon: GitPullRequest,
+    tone: "practice",
+  },
+  {
+    level: "03",
+    title: "System Design",
+    capabilities: "Architecture · boundaries · data contracts · reliability · trade-offs",
+    icon: Network,
+    tone: "systems",
+  },
+  {
+    level: "04",
+    title: "Product & Domain Judgment",
+    capabilities: "User needs · business rules · acceptance criteria · domain context",
+    icon: Compass,
+    tone: "judgment",
+  },
+  {
+    level: "05",
+    title: "AI Collaboration",
+    capabilities: "Task framing · context · constraints · tool use · critique",
+    icon: MessageSquareCode,
+    tone: "collaboration",
+  },
+  {
+    level: "06",
+    title: "End-to-End Ownership",
+    capabilities: "Verification · risk · orchestration · release decisions · outcomes",
+    icon: ShieldCheck,
+    tone: "ownership",
+  },
 ];
 
-const roles = [
-  ["Junior", "Learn concepts and critique generated work earlier"],
-  ["Senior", "Scale judgment across more delivery"],
-  ["Architect", "Make boundaries machine-readable"],
-  ["Manager", "Redesign workflow, controls, and measurement"],
+const learningPath = [
+  ["01–02", "Foundation", "Build and ship sound software."],
+  ["03–04", "Maturity", "Shape systems and problems."],
+  ["05–06", "Leverage", "Direct, verify, and own."],
 ];
 
 export function Slide14EngineerStack() {
   return (
     <div className="standard-slide engineer-slide">
       <header>
-        <p className="eyebrow reveal-in">Implementation fluency remains essential</p>
-        <h1 className="reveal-up" style={revealDelay(70)}>The Engineer Moves Up the Stack</h1>
+        <h1 className="reveal-up" style={revealDelay(70)}>
+          The AI-Native Engineer: A Layered Skills Model
+        </h1>
+        <p className="slide-lead reveal-up" style={revealDelay(140)}>
+          AI fluency builds on engineering maturity—not instead of it.
+        </p>
       </header>
+
       <div className="engineer-layout">
-        <div className="capability-t">
-          <div className="capability-top">
-            {capabilities.map((capability, index) => (
-              <span className="reveal-up" key={capability} style={revealDelay(400 + index * 80)}>{capability}</span>
+        <ol aria-label="Six layers of AI-native engineering capability" className="skill-layer-stack">
+          {skillLayers.map(({ capabilities, icon: Icon, level, title, tone }, index) => (
+            <li
+              className={`skill-layer skill-layer-${tone} reveal-left`}
+              key={level}
+              style={revealDelay(230 + index * 80)}
+            >
+              <span className="skill-layer-number">{level}</span>
+              <Icon aria-hidden="true" className="skill-layer-icon" strokeWidth={1.8} />
+              <strong>{title}</strong>
+              <span className="skill-layer-capabilities">{capabilities}</span>
+            </li>
+          ))}
+        </ol>
+
+        <aside className="skill-journey reveal-right" style={revealDelay(760)}>
+          <p className="section-label">How capability compounds</p>
+          <div className="skill-journey-path">
+            {learningPath.map(([levels, label, detail]) => (
+              <div key={levels}>
+                <span>{levels}</span>
+                <strong>{label}</strong>
+                <p>{detail}</p>
+              </div>
             ))}
           </div>
-          <div className="capability-stem reveal-grow-y" style={revealDelay(200)}>Implementation fluency</div>
-        </div>
-        <div className="role-list">
-          {roles.map(([role, detail], index) => (
-            <div className="reveal-left" key={role} style={revealDelay(900 + index * 90)}>
-              <strong>{role}</strong><span>{detail}</span>
-            </div>
-          ))}
-        </div>
+          <p className="skill-journey-principle">
+            <strong>AI amplifies the stack.</strong>
+            <span>It does not replace its foundation.</span>
+          </p>
+        </aside>
       </div>
-      <p className="slide-pull-line reveal-up" style={revealDelay(1300)}>
-        Skills once concentrated in senior roles are becoming earlier-career differentiators.
-      </p>
     </div>
   );
 }

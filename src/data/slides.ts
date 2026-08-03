@@ -113,11 +113,11 @@ export const slides: SlideDefinition[] = [
   {
     id: 12,
     slug: "verify-the-system",
-    title: "Verify the System, Not the Diff",
+    title: "Green Tests Are Not Release Confidence",
     durationSeconds: 120,
     theme: "paper",
     notes:
-      "This checklist is the demo. Emphasise that automated evidence runs before human attention is spent.",
+      "Walk the session-capacity requirement from left to right. Green tests are one evidence source; release confidence comes from connecting behavior, boundaries, operations, and critical decisions to a named release owner.",
   },
   {
     id: 13,
@@ -131,11 +131,11 @@ export const slides: SlideDefinition[] = [
   {
     id: 14,
     slug: "engineer-stack",
-    title: "The Engineer Moves Up the Stack",
+    title: "The AI-Native Engineer: A Layered Skills Model",
     durationSeconds: 120,
     theme: "paper",
     notes:
-      "Reassure the juniors: implementation fluency is the stem, not the casualty. Expertise gains leverage rather than losing value.",
+      "Yesterday’s senior skills are increasingly becoming earlier-career differentiators, but not instant baselines: teams still need coaching, practice, and context. AI expands an engineer’s reach only when software fundamentals and engineering judgment remain underneath it.",
   },
   {
     id: 15,

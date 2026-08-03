@@ -27,7 +27,7 @@ Every slide must visibly serve this thesis. If a slide can be removed without we
 5. The SDLC did not disappear — the verbs changed.
 6. Ownership is expressed through accountable artifacts.
 7. Code review is necessary but no longer sufficient.
-8. Engineers move up the stack; implementation fluency still matters.
+8. AI fluency builds on engineering maturity; implementation fluency still matters.
 
 ## Locked slide order
 
@@ -44,9 +44,9 @@ Every slide must visibly serve this thesis. If a slide can be removed without we
 | 9 | `full-sdlc-ownership` | Ownership made concrete as seven accountable artifacts. |
 | 10 | `start-with-intent` | Walkthrough part 1 — specification is engineering work. |
 | 11 | `plan-constrain-delegate` | Walkthrough part 2 — challenge the plan, set the contract. |
-| 12 | `verify-the-system` | Walkthrough part 3 — evidence, not diff-reading. |
+| 12 | `verify-the-system` | Walkthrough part 3 — trace the requirement through change assurance to a release decision. |
 | 13 | `change-assurance` | Code review → change assurance. |
-| 14 | `engineer-stack` | What this means for each role. |
+| 14 | `engineer-stack` | A layered skills model from software fundamentals to end-to-end ownership. |
 | 15 | `monday-morning` | Five concrete actions. |
 | 16 | `own-the-outer-loops` | Close on the thesis, then stop. |
 
