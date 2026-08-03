@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { revealDelay } from "@/lib/utils";
 
 export function Slide02Title() {
@@ -16,8 +18,27 @@ export function Slide02Title() {
         Direction · Constraints · Evidence · Outcomes
       </p>
       <footer className="reveal-in" style={revealDelay(620)}>
-        <strong>Hany Saad</strong>
-        <span>Senior Engineering Manager, ITWorx</span>
+        <div className="title-speaker">
+          <strong>Hany Saad</strong>
+          <span>Senior Engineering Manager, ITWorx</span>
+        </div>
+        <a
+          aria-label="Open Hany Saad's LinkedIn profile"
+          className="title-linkedin"
+          href="https://www.linkedin.com/in/hanysaad/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <Image
+            alt="QR code for Hany Saad's LinkedIn profile"
+            data-qr-target="https://www.linkedin.com/in/hanysaad/"
+            height={192}
+            priority
+            src="/assets/qr-linkedin-hany-saad.svg"
+            width={192}
+          />
+          <span>Connect on LinkedIn</span>
+        </a>
       </footer>
     </div>
   );

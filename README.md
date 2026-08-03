@@ -44,7 +44,7 @@ npm run build
 npm run test:pdf
 ```
 
-The API launches Playwright Chromium, waits for local fonts and images, captures `/pdf-render`, and returns `Hany-Saad-AI-Native-Development-CognitionX-Egypt-2026.pdf`. The test starts the production server, calls the endpoint, verifies exactly 16 pages, and writes the result under `artifacts/`.
+The API launches Playwright Chromium, waits for local fonts and images, captures `/pdf-render`, and returns `Hany-Saad-AI-Native-Development-CognitionX-Egypt-2026.pdf`. The test starts the production server, calls the endpoint, verifies exactly 16 pages, decodes every rendered QR placement, and writes the result under `artifacts/`.
 
 ### Hosting Requirement
 
@@ -69,4 +69,4 @@ Results describe specific studies and conditions; they are not universal product
 
 ## Assets
 
-The deck currently uses a generated abstract speaker placeholder and a generated, verified LinkedIn QR. Replace the portrait only when the real local asset is supplied. See `public/assets/README.md` for filenames and optional event/venue assets.
+The deck currently uses a generated abstract speaker placeholder plus generated, verified SVG QR codes for the speaker's LinkedIn profile and presentation repository. Replace the portrait only when the real local asset is supplied. See `public/assets/README.md` for filenames and optional event/venue assets.

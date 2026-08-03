@@ -14,7 +14,7 @@
 | Route | `src/app/api/generate-pdf/route.ts` | `GET`/`POST`, sets `Content-Disposition`, maps failure to a 500 with an actionable message |
 | Renderer | `src/lib/pdf.ts` | Launches Chromium, emulates light + reduced motion, waits for readiness, calls `page.pdf()` |
 | Surface | `src/app/pdf-render/page.tsx` → `PdfDocument` | Renders all 16 slides stacked, sets `data-pdf-ready` after fonts and images settle |
-| Test | `scripts/test-pdf.mjs` | Boots the production server, calls the endpoint, asserts 16 pages, writes `artifacts/` |
+| Test | `scripts/test-pdf.mjs` | Boots the production server, calls the endpoint, asserts 16 pages, decodes all three QR placements, writes `artifacts/` |
 
 The renderer blocks on `[data-pdf-ready="true"]`, so anything asynchronous a slide needs must be awaited inside `PdfDocument` before that flag flips.
 

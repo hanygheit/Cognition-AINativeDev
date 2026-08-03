@@ -47,7 +47,7 @@ npm run test:pdf     # requires: npx playwright install chromium
 - [ ] No control bar, no help modal, no number-jump chip
 - [ ] No speaker notes anywhere
 - [ ] Every slide is in its final animated state
-- [ ] Fonts are embedded; local images resolve; QR code scans
+- [ ] Fonts are embedded; local images resolve; the LinkedIn codes on slides 1 and 16 and repository code on slide 16 decode correctly
 
 ## Accessibility
 

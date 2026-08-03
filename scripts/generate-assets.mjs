@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import jsQR from "jsqr";
@@ -6,7 +6,26 @@ import { PNG } from "pngjs";
 import QRCode from "qrcode";
 
 const assetsDirectory = path.join(process.cwd(), "public", "assets");
-const linkedInUrl = "https://www.linkedin.com/in/hanysaad/";
+const qrAssets = [
+  {
+    fileName: "qr-linkedin-hany-saad.svg",
+    id: "linkedin-hany-saad",
+    label: "Hany Saad on LinkedIn",
+    payload: "https://www.linkedin.com/in/hanysaad/",
+  },
+  {
+    fileName: "qr-presentation-repo.svg",
+    id: "presentation-repository",
+    label: "AI-Native Development presentation repository",
+    payload: "https://github.com/hanygheit/Cognition-AINativeDev",
+  },
+];
+
+const qrOptions = {
+  color: { dark: "#132038", light: "#FFFFFF" },
+  errorCorrectionLevel: "H",
+  margin: 4,
+};
 
 function setPixel(png, x, y, color) {
   if (x < 0 || y < 0 || x >= png.width || y >= png.height) return;
@@ -69,27 +88,41 @@ async function generateEventPlaceholder() {
   await writeFile(path.join(assetsDirectory, "cognitionx-placeholder.png"), PNG.sync.write(png));
 }
 
-async function generateAndVerifyQr() {
-  const qrPath = path.join(assetsDirectory, "linkedin-qr.png");
-  await QRCode.toFile(qrPath, linkedInUrl, {
-    color: { dark: "#16191F", light: "#FFFFFF" },
-    errorCorrectionLevel: "H",
-    margin: 3,
+async function generateAndVerifyQr({ fileName, id, label, payload }) {
+  const verificationPng = await QRCode.toBuffer(payload, {
+    ...qrOptions,
+    type: "png",
+    width: 1024,
+  });
+  const png = PNG.sync.read(verificationPng);
+  const decoded = jsQR(new Uint8ClampedArray(png.data), png.width, png.height);
+  if (decoded?.data !== payload) {
+    throw new Error(`QR verification failed for ${fileName}: decoded ${decoded?.data ?? "nothing"}`);
+  }
+
+  const rawSvg = await QRCode.toString(payload, {
+    ...qrOptions,
+    type: "svg",
     width: 512,
   });
+  const accessibleSvg = rawSvg
+    .replace("<svg ", `<svg role="img" aria-labelledby="${id}-title ${id}-description" `)
+    .replace(
+      ">",
+      `><title id="${id}-title">${label}</title><desc id="${id}-description">QR code linking to ${payload}</desc>`,
+    );
 
-  const png = PNG.sync.read(await readFile(qrPath));
-  const decoded = jsQR(new Uint8ClampedArray(png.data), png.width, png.height);
-  if (decoded?.data !== linkedInUrl) {
-    throw new Error(`QR verification failed: decoded ${decoded?.data ?? "nothing"}`);
-  }
+  await writeFile(path.join(assetsDirectory, fileName), accessibleSvg, "utf8");
 }
 
 await mkdir(assetsDirectory, { recursive: true });
 await Promise.all([
   generateSpeakerPlaceholder(),
   generateEventPlaceholder(),
-  generateAndVerifyQr(),
+  ...qrAssets.map(generateAndVerifyQr),
 ]);
 
-console.log(`Generated local assets and verified QR target: ${linkedInUrl}`);
+console.log("Generated local assets and verified QR targets:");
+for (const { fileName, payload } of qrAssets) {
+  console.log(`- ${fileName}: ${payload}`);
+}

@@ -14,6 +14,9 @@ The checked-in placeholders keep every layout deterministic and offline. Run `np
 
 - `speaker-placeholder.png` — abstract `HS` placeholder, not a generated face.
 - `cognitionx-placeholder.png` — local nested-loop event placeholder.
-- `linkedin-qr.png` — points to `https://www.linkedin.com/in/hanysaad/`; generation decodes and verifies the payload.
+- `qr-linkedin-hany-saad.svg` — points to `https://www.linkedin.com/in/hanysaad/`.
+- `qr-presentation-repo.svg` — points to `https://github.com/hanygheit/Cognition-AINativeDev`.
+
+Both QR codes use high error correction and a four-module quiet zone. Asset generation decodes and verifies both payloads; `npm run test:pdf` also decodes every QR placement rendered on `/pdf-render`.
 
 Do not add remote or expiring image URLs.

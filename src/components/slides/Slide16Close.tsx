@@ -24,19 +24,48 @@ export function Slide16Close() {
           src="/assets/speaker-placeholder.png"
           width={120}
         />
-        <div>
+        <div className="speaker-details">
           <strong>Hany Saad</strong>
           <span>Senior Engineering Manager, ITWorx</span>
-          <a href="https://www.linkedin.com/in/hanysaad/">linkedin.com/in/hanysaad</a>
         </div>
-        <Image
-          alt="QR code linking to Hany Saad on LinkedIn"
-          className="linkedin-qr"
-          height={132}
-          priority
-          src="/assets/linkedin-qr.png"
-          width={132}
-        />
+        <nav aria-label="Speaker and presentation links" className="close-links">
+          <a
+            aria-label="Open Hany Saad's LinkedIn profile"
+            className="qr-link"
+            href="https://www.linkedin.com/in/hanysaad/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Image
+              alt="QR code for Hany Saad's LinkedIn profile"
+              className="qr-code"
+              data-qr-target="https://www.linkedin.com/in/hanysaad/"
+              height={160}
+              priority
+              src="/assets/qr-linkedin-hany-saad.svg"
+              width={160}
+            />
+            <span>LinkedIn</span>
+          </a>
+          <a
+            aria-label="Open the AI-Native Development presentation repository"
+            className="qr-link"
+            href="https://github.com/hanygheit/Cognition-AINativeDev"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Image
+              alt="QR code for the presentation repository"
+              className="qr-code"
+              data-qr-target="https://github.com/hanygheit/Cognition-AINativeDev"
+              height={160}
+              priority
+              src="/assets/qr-presentation-repo.svg"
+              width={160}
+            />
+            <span>Presentation repo</span>
+          </a>
+        </nav>
       </footer>
     </div>
   );

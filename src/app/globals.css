@@ -831,8 +831,11 @@ a:focus-visible {
 .title-subhead { max-width: 55cqw; margin: 1.1cqw 0 0; color: var(--on-dark-muted); font-size: 2.2cqw; line-height: 1.22; }
 .title-slide blockquote { width: fit-content; max-width: 56cqw; margin: 3.2cqw 0 0; padding: 1.1cqw 1.5cqw; border-left: 0.3cqw solid var(--signal); background: rgb(224 147 15 / 0.1); font-family: Georgia, serif; font-size: 2cqw; font-style: italic; }
 .title-pillars { margin: 1.6cqw 0 0; color: var(--signal); font-family: "JetBrains Mono", monospace; font-size: 1.1cqw; }
-.title-slide footer { position: absolute; bottom: 4.4cqw; display: flex; align-items: baseline; gap: 1cqw; font-size: 1.2cqw; }
-.title-slide footer span { color: var(--muted); }
+.title-slide footer { position: absolute; right: 5cqw; bottom: 3.4cqw; left: 5cqw; display: flex; align-items: flex-end; justify-content: space-between; font-size: 1.2cqw; }
+.title-speaker { display: flex; align-items: baseline; gap: 1cqw; padding-bottom: 1cqw; }
+.title-speaker span { color: var(--muted); }
+.title-linkedin { display: grid; justify-items: center; gap: 0.45cqw; color: var(--on-dark-muted); font-family: "JetBrains Mono", monospace; font-size: 0.9cqw; line-height: 1; text-decoration: none; }
+.title-linkedin img { width: 7.2cqw; height: 7.2cqw; padding: 0.3cqw; border: 1px solid rgb(255 255 255 / 0.2); border-radius: 4px; background: var(--card); }
 
 /* Slide 3 — The Bottleneck Moved */
 .bottleneck-slide {
@@ -1116,13 +1119,14 @@ a:focus-visible {
 .arc-motif-close { top: -17cqw; right: -7cqw; border-color: rgb(20 25 34 / 0.3); }
 .arc-motif-close::before,
 .arc-motif-close::after { border-color: rgb(20 25 34 / 0.2); }
-.close-slide footer { position: absolute; right: 0; bottom: 0; left: 0; display: grid; height: 10.5cqw; grid-template-columns: 6.3cqw 1fr 7cqw; align-items: center; gap: 1.4cqw; padding: 1.2cqw 5cqw; color: var(--on-dark); background: var(--graphite); }
+.close-slide footer { position: absolute; right: 0; bottom: 0; left: 0; display: grid; height: 10.5cqw; grid-template-columns: 6.3cqw minmax(0, 1fr) auto; align-items: center; gap: 1.4cqw; padding: 1.2cqw 5cqw; color: var(--on-dark); background: var(--graphite); }
 .speaker-portrait { width: 6.3cqw; height: 6.3cqw; border: 2px solid rgb(224 147 15 / 0.6); border-radius: 50%; object-fit: cover; }
-.close-slide footer div { display: flex; flex-direction: column; }
+.speaker-details { display: flex; flex-direction: column; }
 .close-slide footer strong { font-size: 1.35cqw; }
-.close-slide footer span,
-.close-slide footer a { color: #aeb4bd; font-size: 1cqw; text-decoration: none; }
-.linkedin-qr { width: 6.8cqw; height: 6.8cqw; padding: 0.35cqw; border-radius: 4px; background: white; }
+.speaker-details span { color: var(--steel-soft); font-size: 1cqw; }
+.close-links { display: flex; align-items: center; gap: 1.2cqw; }
+.qr-link { display: grid; justify-items: center; gap: 0.3cqw; color: var(--steel-soft); font-size: 0.9cqw; line-height: 1; text-decoration: none; }
+.qr-code { width: 6.1cqw; height: 6.1cqw; padding: 0.25cqw; border: 1px solid rgb(255 255 255 / 0.18); border-radius: 4px; background: var(--card); }
 
 /* Overview */
 .overview-page {
