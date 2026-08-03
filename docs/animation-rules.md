@@ -6,7 +6,7 @@ Motion exists to control **reading order**, never to entertain.
 
 1. **No extra clicks.** Every reveal runs automatically when the slide mounts. Navigation is one key press per slide, always.
 2. Animations run **once**. No loops, no infinite pulses, no hover choreography inside slide content.
-3. Duration `250–600ms`. Total sequence per slide must finish under `~1.2s`.
+3. Duration `250–600ms`. Total sequence per slide must finish under `~1.2s`, except Slide 2's deliberate release-decision sequence, which runs for approximately 8 seconds.
 4. Motion is limited to opacity, small `translateY`/`translateX` (`≤ 1.2cqw`), `scale` (`≥ 0.96`), and SVG `stroke-dashoffset` line draws.
 5. Respect `prefers-reduced-motion`. Both duration *and delay* are neutralised globally.
 6. Never animate the control bar into slide content, and never animate slide content in response to control-bar state.
@@ -35,17 +35,17 @@ Slides stay **React Server Components**. Reveals are pure CSS, declared once in 
 
 ## Stagger budget per slide
 
-Base delay `0ms`, step `70–110ms`, hard cap `900ms` for the last element. Slides with more than eight revealed groups must reveal by *group*, not by item.
+Base delay `0ms`, step `70–110ms`, hard cap `900ms` for the last element. Slides with more than eight revealed groups must reveal by *group*, not by item. Slide 2 is the approved exception: its seven narrative beats run automatically over approximately 8 seconds.
 
 ## Approved sequences
 
 | Slide | Sequence |
 | --- | --- |
 | 1 | Eyebrow → title → subhead → quote → pillars → footer |
-| 2 | Two evidence panels fade in, divider draws, question line last |
-| 3 | Five mode columns left to right, then the control-strength arrow |
-| 4 | Title, then the five options left to right |
-| 5 | Axes → generation line draws → confidence line draws → gap fill → gap label |
+| 2 | Opening line → ownership line → release card → successful checks → risks → decision focus → thesis |
+| 3 | Title → generation statement → shift line → verification statement → bottleneck |
+| 4 | Control statement → levels from code to outcome → orchestrator line |
+| 5 | Two evidence panels fade in, divider draws, question line last |
 | 6 | Rings appear inside-out, definitions follow top to bottom |
 | 7 | Spine draws, inner loop first, then engineering, then product |
 | 8 | Table rows reveal top to bottom |

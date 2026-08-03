@@ -10,7 +10,7 @@ export function Slide02Title() {
         From Writing Code to Owning the Full SDLC
       </p>
       <blockquote className="reveal-up" style={revealDelay(360)}>
-        You are the orchestrator—not the typist.
+        A role-evolution talk, not a tools talk.
       </blockquote>
       <p className="title-pillars reveal-in" style={revealDelay(500)}>
         Direction · Constraints · Evidence · Outcomes

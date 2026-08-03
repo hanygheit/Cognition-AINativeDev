@@ -9,7 +9,7 @@ Themes are set per slide in `src/data/slides.ts` and applied by `SlideFrame` as 
 | Theme | Used by | Role |
 | --- | --- | --- |
 | `paper` | 13 slides | Default. Warm white editorial surface. |
-| `dark` | slides 2 and 16's footer band | Hero and punctuation only. |
+| `dark` | slide 1 and slide 16's footer band | Hero and punctuation only. |
 | `ink` | slide 13 | One mid-deck contrast beat. |
 | `signal` | slide 16 | Amber close. |
 

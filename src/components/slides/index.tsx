@@ -5,9 +5,9 @@ import { SlideFrame } from "@/components/presentation/SlideFrame";
 
 import { Slide01TwoOutcomes } from "./Slide01TwoOutcomes";
 import { Slide02Title } from "./Slide02Title";
+import { Slide02YourNameOnRelease } from "./Slide02YourNameOnRelease";
 import { Slide03Modes } from "./Slide03Modes";
 import { Slide04Audience } from "./Slide04Audience";
-import { Slide05VerificationGap } from "./Slide05VerificationGap";
 import { Slide06FourLayers } from "./Slide06FourLayers";
 import { Slide07ThreeLoops } from "./Slide07ThreeLoops";
 import { Slide08SdlcVerbs } from "./Slide08SdlcVerbs";
@@ -22,10 +22,10 @@ import { Slide16Close } from "./Slide16Close";
 
 const slideComponents: Record<number, ComponentType> = {
   1: Slide02Title,
-  2: Slide01TwoOutcomes,
+  2: Slide02YourNameOnRelease,
   3: Slide03Modes,
   4: Slide04Audience,
-  5: Slide05VerificationGap,
+  5: Slide01TwoOutcomes,
   6: Slide06FourLayers,
   7: Slide07ThreeLoops,
   8: Slide08SdlcVerbs,

@@ -34,10 +34,10 @@ Every slide must visibly serve this thesis. If a slide can be removed without we
 | # | Slug | Purpose in the narrative |
 | --- | --- | --- |
 | 1 | `ai-native-development` | Title and thesis. Frames a role-evolution talk, not a tools talk. |
-| 2 | `one-promise-two-outcomes` | Two real, opposite results. Productivity is conditional. |
-| 3 | `five-modes` | Shared vocabulary: five operating modes by autonomy and control. |
-| 4 | `where-are-you` | Audience calibration moment against those five modes. |
-| 5 | `verification-gap` | Names the new bottleneck: confidence, not creation. |
+| 2 | `your-name-is-on-the-release` | Opens on the release decision: generated implementation does not transfer ownership. |
+| 3 | `the-bottleneck-moved` | Names the new bottleneck: confidence, not creation. |
+| 4 | `move-control-higher` | Moves engineering control from code toward behavior, architecture, risk, and outcome. |
+| 5 | `conditions-change-outcomes` | Two real, opposite results. Productivity is conditional. |
 | 6 | `four-layers` | The delegation model: Prompt → Context → Harness → Loop. |
 | 7 | `three-loops` | Agent / engineering / product loops and their clocks. |
 | 8 | `sdlc-verbs` | The lifecycle stayed; the verbs changed. |
