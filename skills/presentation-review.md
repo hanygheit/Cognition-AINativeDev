@@ -11,7 +11,7 @@ End-to-end review pass over the whole deck. Use when asked to "review the presen
 
 ## Procedure
 
-1. **Narrative sweep.** Read the 16 titles and pull lines in order, nothing else. Does the argument hold with no other information? Note any slide that does not move the argument forward.
+1. **Narrative sweep.** Read the 17 titles and pull lines in order, nothing else. Does the argument hold with no other information? Note any slide that does not move the argument forward.
 2. **Per-slide pass.** Apply [content-accuracy-review](content-accuracy-review.md) then [slide-design-review](slide-design-review.md) to each slide.
 3. **Repetition check.** Count layout archetypes. If more than three slides share the same card/row grid, redesign one into a diagram.
 4. **Density check.** Count visible words per slide. Anything over ~60 is a rewrite candidate.

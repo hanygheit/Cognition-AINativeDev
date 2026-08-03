@@ -1,13 +1,14 @@
 import Link from "next/link";
 
 import { RenderSlide } from "@/components/slides";
-import { slides } from "@/data/slides";
+import { slides, TOTAL_DURATION_SECONDS } from "@/data/slides";
+import { formatDuration } from "@/lib/utils";
 
 export function SlideOverview() {
   return (
     <main className="overview-page">
       <header>
-        <div><p className="eyebrow">16 slides · 28 minutes</p><h1>Slide overview</h1></div>
+        <div><p className="eyebrow">{slides.length} slides · {formatDuration(TOTAL_DURATION_SECONDS)} planned</p><h1>Slide overview</h1></div>
         <Link href="/present/1">Start presentation</Link>
       </header>
       <div className="overview-grid">

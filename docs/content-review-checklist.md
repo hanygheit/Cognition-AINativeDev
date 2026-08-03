@@ -18,10 +18,11 @@ Run this per slide before declaring content work complete. Source of truth for t
 ## Deck-level gate
 
 - [ ] Terminology is consistent: *mode*, *loop*, *layer*, *artifact*, *evidence*, *delegation contract*, *change assurance*. One term per concept, deck-wide.
-- [ ] The walkthrough (10 → 11 → 12) uses one continuous example: session capacity and waitlist.
+- [ ] The walkthrough (11 → 12 → 13) uses one continuous example: session capacity and waitlist.
 - [ ] Slide 2 reads as a release scenario, not as sourced productivity evidence.
-- [ ] Slide 15 actions are all doable by one engineer in one week.
-- [ ] Slide 16 restates the thesis verbatim in spirit, then stops.
+- [ ] Slide 6 keeps both productivity results contextual and avoids a universal claim.
+- [ ] Slide 16 actions are all doable by one engineer in one week.
+- [ ] Slide 17 restates the thesis verbatim in spirit, then stops.
 - [ ] Total spoken duration in `durationSeconds` sums to the session length.
 
 ## Banned phrasing

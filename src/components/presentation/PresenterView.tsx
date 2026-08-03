@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { RenderSlide } from "@/components/slides";
-import { getSlide, SLIDE_COUNT } from "@/data/slides";
+import { getCumulativeDuration, getSlide, SLIDE_COUNT } from "@/data/slides";
 import { formatDuration } from "@/lib/utils";
 import { KeyboardHelp } from "./KeyboardHelp";
 import { PresenterControls } from "./PresenterControls";
@@ -59,6 +59,7 @@ export function PresenterView() {
         <section className="timing-card">
           <div><span>Elapsed</span><strong>{formatDuration(elapsedSeconds)}</strong></div>
           <div><span>Slide target</span><strong>{formatDuration(slide.durationSeconds)}</strong></div>
+          <div><span>Cumulative target</span><strong>{formatDuration(getCumulativeDuration(current))}</strong></div>
         </section>
       </aside>
       <PresenterControls

@@ -65,7 +65,7 @@ export function Slide14EngineerStack() {
     <div className="standard-slide engineer-slide">
       <header>
         <h1 className="reveal-up" style={revealDelay(70)}>
-          The AI-Native Engineer: A Layered Skills Model
+          The Engineer Moves Up the Stack
         </h1>
         <p className="slide-lead reveal-up" style={revealDelay(140)}>
           AI fluency builds on engineering maturity—not instead of it.

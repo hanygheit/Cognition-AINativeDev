@@ -29,7 +29,7 @@ export function Slide12Verify() {
       <header>
         <p className="eyebrow reveal-in">Verify the whole change</p>
         <h1 className="reveal-up" style={revealDelay(70)}>
-          Green Tests Are Not Release Confidence
+          Verify the System, Not the Diff
         </h1>
         <p className="slide-lead reveal-up" style={revealDelay(130)}>
           Verify the behavior, boundaries, operations, and critical decisions—not only the generated code.

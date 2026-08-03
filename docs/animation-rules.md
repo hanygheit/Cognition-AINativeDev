@@ -45,15 +45,16 @@ Base delay `0ms`, step `70–110ms`, hard cap `900ms` for the last element. Slid
 | 2 | Opening line → ownership line → release card → successful checks → risks → decision focus → thesis |
 | 3 | Title → generation statement → shift line → verification statement → bottleneck |
 | 4 | Control statement → levels from code to outcome → orchestrator line |
-| 5 | Two evidence panels fade in, divider draws, question line last |
-| 6 | Rings appear inside-out, definitions follow top to bottom |
-| 7 | Spine draws, inner loop first, then engineering, then product |
-| 8 | Table rows reveal top to bottom |
-| 9 | Artifact rows reveal one by one |
-| 10 | Request → questions → acceptance strip |
-| 11 | Plan column → redline column → delegation contract |
-| 12 | Requirement → assurance groups in order → release decision → pull line |
-| 13 | Assurance layers reveal top to bottom, quote last |
-| 14 | Title → subtitle → six skill layers in order → learning-path panel |
-| 15 | Five moves in order, aside and measurement strip last |
-| 16 | Eyebrow → thesis → secondary → closing quote → footer band |
+| 5 | Title and subtitle → Vibe Coding → AI-Assisted Coding → AI Coding Agents → responsibility statement |
+| 6 | Two evidence panels fade in, divider draws, question line last |
+| 7 | Rings appear inside-out, definitions follow top to bottom |
+| 8 | Spine draws, inner loop first, then engineering, then product |
+| 9 | Traditional flow → limitations → continuous loop → AI-native panel → human gates → takeaway |
+| 10 | Artifact rows reveal one by one |
+| 11 | Request → questions → acceptance strip |
+| 12 | Plan column → redline column → delegation contract |
+| 13 | Requirement → assurance groups in order → release decision → pull line |
+| 14 | Assurance layers reveal top to bottom, quote last |
+| 15 | Title → subtitle → six skill layers in order → learning-path panel |
+| 16 | Five moves in order, aside and measurement strip last |
+| 17 | Eyebrow → thesis → secondary → closing quote → footer band |

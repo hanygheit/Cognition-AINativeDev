@@ -92,14 +92,14 @@ try {
 
   const bytes = new Uint8Array(await response.arrayBuffer());
   const pdf = await PDFDocument.load(bytes);
-  if (pdf.getPageCount() !== 16) {
-    throw new Error(`Expected 16 PDF pages, received ${pdf.getPageCount()}`);
+  if (pdf.getPageCount() !== 17) {
+    throw new Error(`Expected 17 PDF pages, received ${pdf.getPageCount()}`);
   }
 
   await mkdir(path.dirname(outputPath), { recursive: true });
   await writeFile(outputPath, bytes);
   await verifyRenderedQrCodes();
-  console.log(`Verified 16-page PDF: ${outputPath}`);
+  console.log(`Verified 17-page PDF: ${outputPath}`);
 } finally {
   server?.kill();
 }

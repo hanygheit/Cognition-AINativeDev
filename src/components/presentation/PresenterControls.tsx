@@ -10,7 +10,7 @@ import {
   RotateCcw,
 } from "lucide-react";
 
-import { SLIDE_COUNT } from "@/data/slides";
+import { SLIDE_COUNT, TOTAL_DURATION_SECONDS } from "@/data/slides";
 import { formatDuration } from "@/lib/utils";
 import { PdfButton } from "./PdfButton";
 import { ProgressArc } from "./ProgressArc";
@@ -38,7 +38,11 @@ export function PresenterControls({
   onPrevious,
   onRestartTimer,
 }: PresenterControlsProps) {
-  const timerState = elapsedSeconds >= 1680 ? "hard" : elapsedSeconds >= 1500 ? "warning" : "normal";
+  const timerState = elapsedSeconds >= TOTAL_DURATION_SECONDS
+    ? "hard"
+    : elapsedSeconds >= TOTAL_DURATION_SECONDS - 180
+      ? "warning"
+      : "normal";
 
   return (
     <nav aria-label="Presentation controls" className="presenter-controls">

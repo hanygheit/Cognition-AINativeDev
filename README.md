@@ -1,6 +1,6 @@
 # AI-Native Development Conference Presentation
 
-A production-quality 16:9 web presentation for Hany Saad's CognitionX Egypt 2026 session, **AI-Native Development: From Writing Code to Owning the Full SDLC**.
+A production-quality 17-slide, 16:9 web presentation for Hany Saad's CognitionX Egypt 2026 session, **AI-Native Development: From Writing Code to Owning the Full SDLC**.
 
 ## Run Locally
 
@@ -17,7 +17,7 @@ Open `http://localhost:3000`; the root redirects to slide 1.
 
 `AGENTS.md` is the canonical contract for humans and AI agents. It indexes the supporting documents:
 
-- `docs/presentation-brief.md` — thesis, locked 16-slide order, evidence framing
+- `docs/presentation-brief.md` — thesis, locked 17-slide order, evidence framing
 - `docs/design-system.md` — themes, tokens, typography, layout
 - `docs/animation-rules.md` — reveal system and approved per-slide sequences
 - `docs/content-review-checklist.md` — per-slide content bar
@@ -27,7 +27,7 @@ Open `http://localhost:3000`; the root redirects to slide 1.
 
 ## Routes
 
-- `/present/1` through `/present/16` — audience presentation
+- `/present/1` through `/present/17` — audience presentation
 - `/presenter` — current slide, next preview, notes, and timer
 - `/overview` — all slide thumbnails
 - `/pdf-render` — deterministic all-slides capture surface
@@ -44,7 +44,7 @@ npm run build
 npm run test:pdf
 ```
 
-The API launches Playwright Chromium, waits for local fonts and images, captures `/pdf-render`, and returns `Hany-Saad-AI-Native-Development-CognitionX-Egypt-2026.pdf`. The test starts the production server, calls the endpoint, verifies exactly 16 pages, decodes every rendered QR placement, and writes the result under `artifacts/`.
+The API launches Playwright Chromium, waits for local fonts and images, captures `/pdf-render`, and returns `Hany-Saad-AI-Native-Development-CognitionX-Egypt-2026.pdf`. The test starts the production server, calls the endpoint, verifies exactly 17 pages, decodes every rendered QR placement, and writes the result under `artifacts/`.
 
 ### Hosting Requirement
 

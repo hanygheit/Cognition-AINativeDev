@@ -23,7 +23,7 @@ Update the owning document when a rule changes. Do not restate these rules elsew
 
 - Build a conference presentation app, not a dashboard, landing page, document, or generic slide editor.
 - Use Next.js App Router, React, strict TypeScript, Tailwind CSS, lucide-react, and Playwright unless the repository establishes an equivalent compatible pattern.
-- Preserve the locked order and core content of exactly 16 slides. Do not add, remove, reorder, or materially rewrite slides without explicit approval.
+- Preserve the locked order and core content of exactly 17 slides. Do not add, remove, reorder, or materially rewrite slides without explicit approval.
 - Preserve a 16:9 stage at every audience viewport. Favor sparse compositions, large-room readability, high contrast, and crisp diagrams over dense text or card grids.
 - Keep the visual direction light editorial enterprise keynote, with nested control loops as the recurring motif. Do not add robot, AI-brain, code-rain, decorative orb, or vendor-logo-strip imagery.
 - Use only local assets in the final build. Never fabricate a speaker portrait, citation, quote, statistic, event logo, or partner logo.
@@ -34,7 +34,7 @@ Update the owning document when a rule changes. Do not restate these rules elsew
 - Implement each slide as its own component under `src/components/slides/`. Keep navigation, controls, framing, overview, presenter UI, and PDF controls under `src/components/presentation/`.
 - Keep slide components as React Server Components. Interactivity and timers belong to the presentation shell, not to slides.
 - Treat presenter notes as data, separate from visual slide content. Never expose notes in audience mode or PDF output.
-- Support stable routes `/present/1` through `/present/16`, plus `/presenter`, `/overview`, `/pdf-render`, and `/api/generate-pdf`. Reject or redirect invalid slide numbers safely.
+- Support stable routes `/present/1` through `/present/17`, plus `/presenter`, `/overview`, `/pdf-render`, and `/api/generate-pdf`. Reject or redirect invalid slide numbers safely.
 - Keep audience rendering, presenter rendering, and deterministic PDF rendering distinct. Interactive controls and intermediate animation states must not appear in `/pdf-render`.
 - Maintain keyboard, mouse, touch, deep-link, fullscreen, overview, notes, presenter, timer, and number-jump behavior when changing navigation.
 
@@ -55,13 +55,13 @@ Update the owning document when a rule changes. Do not restate these rules elsew
 
 - Generate PDF server-side with Playwright through `/api/generate-pdf`; never use `window.print()` or browser print as a substitute.
 - Wait for fonts and local assets, disable motion and controls, render every slide in its final state, and return one 16:9 slide per page with no margins, headers, footers, controls, or notes.
-- Preserve the filename `Hany-Saad-AI-Native-Development-CognitionX-Egypt-2026.pdf` and verify that the result has exactly 16 pages.
+- Preserve the filename `Hany-Saad-AI-Native-Development-CognitionX-Egypt-2026.pdf` and verify that the result has exactly 17 pages.
 - Document Chromium/runtime requirements clearly when the deployment target cannot execute bundled headless Chromium.
 
 ## Content And Accessibility
 
 - Keep evidence claims contextual. The `+55.8%`, `-19%`, and DORA references describe specific studies and conditions, not universal productivity guarantees.
-- Keep speaker identity and portrait usage limited to slides 2 and 16. Use the supplied portrait only; otherwise retain a tasteful placeholder.
+- Keep speaker identity and portrait usage limited to slides 1 and 17. Use the supplied portrait only; otherwise retain a tasteful placeholder.
 - Use semantic controls, descriptive labels, visible focus states, meaningful alt text, sufficient contrast, keyboard-first interaction, and reduced-motion behavior.
 - Do not encode meaning by color alone. Keep source/footer text readable and redesign a slide rather than shrinking core text below conference-room scale.
 

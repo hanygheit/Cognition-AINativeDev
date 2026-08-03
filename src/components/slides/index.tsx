@@ -7,6 +7,7 @@ import { Slide01TwoOutcomes } from "./Slide01TwoOutcomes";
 import { Slide02Title } from "./Slide02Title";
 import { Slide02YourNameOnRelease } from "./Slide02YourNameOnRelease";
 import { Slide03Modes } from "./Slide03Modes";
+import { Slide04DevelopmentModes } from "./Slide04DevelopmentModes";
 import { Slide04Audience } from "./Slide04Audience";
 import { Slide06FourLayers } from "./Slide06FourLayers";
 import { Slide07ThreeLoops } from "./Slide07ThreeLoops";
@@ -25,18 +26,19 @@ const slideComponents: Record<number, ComponentType> = {
   2: Slide02YourNameOnRelease,
   3: Slide03Modes,
   4: Slide04Audience,
-  5: Slide01TwoOutcomes,
-  6: Slide06FourLayers,
-  7: Slide07ThreeLoops,
-  8: Slide08SdlcVerbs,
-  9: Slide09Ownership,
-  10: Slide10Intent,
-  11: Slide11PlanDelegate,
-  12: Slide12Verify,
-  13: Slide13AssuranceStack,
-  14: Slide14EngineerStack,
-  15: Slide15Monday,
-  16: Slide16Close,
+  5: Slide04DevelopmentModes,
+  6: Slide01TwoOutcomes,
+  7: Slide06FourLayers,
+  8: Slide07ThreeLoops,
+  9: Slide08SdlcVerbs,
+  10: Slide09Ownership,
+  11: Slide10Intent,
+  12: Slide11PlanDelegate,
+  13: Slide12Verify,
+  14: Slide13AssuranceStack,
+  15: Slide14EngineerStack,
+  16: Slide15Monday,
+  17: Slide16Close,
 };
 
 type RenderSlideProps = Readonly<{

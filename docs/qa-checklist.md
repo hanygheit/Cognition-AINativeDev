@@ -9,16 +9,16 @@ npm run build
 npm run test:pdf     # requires: npx playwright install chromium
 ```
 
-`test:pdf` starts the production server, calls `/api/generate-pdf`, asserts exactly 16 pages, and writes `artifacts/Hany-Saad-AI-Native-Development-CognitionX-Egypt-2026.pdf`.
+`test:pdf` starts the production server, calls `/api/generate-pdf`, asserts exactly 17 pages, and writes `artifacts/Hany-Saad-AI-Native-Development-CognitionX-Egypt-2026.pdf`.
 
 ## Routes
 
 - [ ] `/` redirects to `/present/1`
-- [ ] `/present/1` … `/present/16` all render
-- [ ] `/present/0`, `/present/17`, `/present/abc` return 404 rather than crashing
-- [ ] `/overview` renders 16 thumbnails, each linking to its slide
+- [ ] `/present/1` … `/present/17` all render
+- [ ] `/present/0`, `/present/18`, `/present/abc` return 404 rather than crashing
+- [ ] `/overview` renders 17 thumbnails, each linking to its slide
 - [ ] `/presenter` renders current slide, next preview, notes, timers
-- [ ] `/pdf-render` renders 16 stacked pages with no controls
+- [ ] `/pdf-render` renders 17 stacked pages with no controls
 - [ ] `POST /api/generate-pdf` returns `application/pdf`
 
 ## Navigation
@@ -26,7 +26,7 @@ npm run test:pdf     # requires: npx playwright install chromium
 - [ ] `→` / `Space` / `PageDown` advance; `←` / `Backspace` / `PageUp` go back
 - [ ] `Home` / `End` jump to first / last
 - [ ] Number + `Enter` jumps to a slide; the buffer clears itself
-- [ ] Bounds are respected at slides 1 and 16 (no dead route)
+- [ ] Bounds are respected at slides 1 and 17 (no dead route)
 - [ ] `F` fullscreen, `O` overview, `N` notes, `P` presenter, `?` help, `Esc` closes overlays
 - [ ] Touch swipe left/right works and does not fire on a tap
 
@@ -42,12 +42,12 @@ npm run test:pdf     # requires: npx playwright install chromium
 
 ## PDF
 
-- [ ] Exactly 16 pages
+- [ ] Exactly 17 pages
 - [ ] 13.333in × 7.5in, no margins, headers, or footers
 - [ ] No control bar, no help modal, no number-jump chip
 - [ ] No speaker notes anywhere
 - [ ] Every slide is in its final animated state
-- [ ] Fonts are embedded; local images resolve; the LinkedIn codes on slides 1 and 16 and repository code on slide 16 decode correctly
+- [ ] Fonts are embedded; local images resolve; the LinkedIn codes on slides 1 and 17 and repository code on slide 17 decode correctly
 
 ## Accessibility
 

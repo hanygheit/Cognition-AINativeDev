@@ -513,7 +513,7 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
-.audience-notes p { margin: 7px 0 0; font-size: 16px; line-height: 1.45; }
+.audience-notes p { margin: 7px 0 0; font-size: 16px; line-height: 1.45; white-space: pre-line; }
 
 .modal-backdrop {
   position: fixed;
@@ -547,7 +547,7 @@ a:focus-visible {
 .keyboard-help dt { color: var(--signal); font-family: "JetBrains Mono", monospace; font-size: 14px; }
 .keyboard-help dd { margin: 0; font-size: 15px; }
 
-/* Slide 5 — Conditions Change Outcomes */
+/* Slide 6 — Conditions Change Outcomes */
 .outcomes-slide {
   display: flex;
   flex-direction: column;
@@ -894,6 +894,184 @@ a:focus-visible {
   font-weight: 600;
 }
 
+/* Slide 3 — Five modes */
+.modes-slide { padding-bottom: 3.4cqw; }
+.mode-spectrum { display: grid; flex: 1; grid-template-columns: repeat(5, 1fr); align-items: stretch; margin-top: 2.2cqw; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.mode-item { position: relative; padding: 2.2cqw 1.4cqw 1.6cqw; border-right: 1px solid var(--rule); }
+.mode-item:last-child { border-right: 0; }
+.mode-number { display: grid; width: 2.6cqw; height: 2.6cqw; border: 1px solid var(--structure); border-radius: 50%; color: var(--structure); font-family: "JetBrains Mono", monospace; font-size: 1.1cqw; place-items: center; }
+.mode-item h2 { margin: 2cqw 0 0.65cqw; color: var(--heading); font-size: 1.55cqw; line-height: 1.12; }
+.mode-item p { margin: 0; color: var(--muted); font-size: 1.1cqw; line-height: 1.38; }
+.mode-item:nth-child(n + 4) { background: linear-gradient(180deg, var(--signal-soft), transparent 72%); }
+.mode-item:nth-child(n + 4) .mode-number { border-color: var(--signal); color: var(--signal-ink); }
+.control-strength { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.1cqw; margin: 1.1cqw 0 0; color: var(--muted); font-family: "JetBrains Mono", monospace; font-size: 0.9cqw; }
+.control-strength div { height: 0.28cqw; background: linear-gradient(90deg, var(--structure), var(--signal)); clip-path: polygon(0 35%, 96% 35%, 96% 0, 100% 50%, 96% 100%, 96% 65%, 0 65%); }
+.modes-slide .slide-pull-line { margin-top: 1.3cqw; }
+
+/* Slide 4 — Choose the right AI mode */
+.ai-mode-slide header { margin-bottom: 1cqw; }
+
+.ai-mode-slide .slide-lead { max-width: none; }
+
+.ai-mode-spectrum {
+  display: grid;
+  min-height: 20.6cqw;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+  border-block: 1px solid var(--rule-strong);
+  background: var(--card);
+  list-style: none;
+}
+
+.ai-mode {
+  --mode-accent: var(--steel);
+
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 1.05cqw 1.3cqw 1cqw;
+}
+
+.ai-mode + .ai-mode { border-left: 1px solid var(--rule); }
+.ai-mode-2 { --mode-accent: var(--graphite); }
+.ai-mode-3 { --mode-accent: var(--signal-ink); }
+
+.ai-mode-heading {
+  display: grid;
+  grid-template-columns: 2.25cqw 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 0.85cqw;
+}
+
+.ai-mode-icon {
+  display: grid;
+  width: 2.25cqw;
+  height: 2.25cqw;
+  grid-row: 1 / 3;
+  border: 1px solid color-mix(in srgb, var(--mode-accent) 38%, var(--rule));
+  border-radius: 50%;
+  color: var(--mode-accent);
+  background: color-mix(in srgb, var(--mode-accent) 8%, var(--card));
+  place-items: center;
+}
+
+.ai-mode-icon svg {
+  width: 1.2cqw;
+  height: 1.2cqw;
+  stroke-width: 1.8;
+}
+
+.ai-mode-label {
+  color: var(--mode-accent);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9cqw;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.ai-mode-heading strong {
+  margin-top: 0.22cqw;
+  color: var(--heading);
+  font-size: 1.4cqw;
+  line-height: 1.12;
+}
+
+.ai-mode-best-for {
+  min-height: 5cqw;
+  margin-top: 0.9cqw;
+}
+
+.ai-mode-best-for > span,
+.ai-mode-examples > span {
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9cqw;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.ai-mode-best-for p {
+  margin: 0.35cqw 0 0;
+  color: var(--ink);
+  font-size: 1cqw;
+  line-height: 1.32;
+}
+
+.ai-mode > blockquote {
+  min-height: 4.8cqw;
+  margin: 0.8cqw 0 0;
+  padding: 0.65cqw 0.8cqw;
+  border-left: 0.25cqw solid var(--mode-accent);
+  color: var(--heading);
+  background: color-mix(in srgb, var(--mode-accent) 7%, var(--card));
+  font-family: Georgia, serif;
+  font-size: 1cqw;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.ai-mode-examples {
+  margin-top: auto;
+  padding-top: 0.65cqw;
+}
+
+.ai-mode-examples ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35cqw;
+  margin: 0.35cqw 0 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.9cqw;
+  line-height: 1.35;
+  list-style: none;
+}
+
+.ai-mode-examples li {
+  padding: 0.18cqw 0.42cqw;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--paper);
+  white-space: nowrap;
+}
+
+.ai-mode-takeaway {
+  margin-top: 1cqw;
+}
+
+.ai-mode-takeaway blockquote {
+  margin: 0;
+  padding: 0.8cqw 1.15cqw;
+  border-left: 0.3cqw solid var(--signal);
+  color: var(--heading);
+  background: var(--signal-soft);
+  font-family: Georgia, serif;
+  font-size: 1.35cqw;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.ai-mode-disclaimer {
+  margin: 0.65cqw 0 0;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9cqw;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+/* Slide 5 — Where are you today */
+.audience-slide { display: flex; flex-direction: column; justify-content: center; }
+.audience-slide h1 { font-size: 5cqw; text-align: center; }
+.audience-slide .slide-lead { max-width: none; margin-top: 1.2cqw; font-size: 1.6cqw; text-align: center; }
+.audience-slide ol { position: relative; z-index: 2; display: flex; justify-content: center; gap: 1.9cqw; margin: 4.4cqw 0 0; padding: 0; list-style: none; }
+.audience-slide li { display: flex; align-items: center; gap: 0.65cqw; color: var(--ink); font-size: 1.55cqw; }
+.audience-slide li span { display: grid; width: 2.3cqw; height: 2.3cqw; border: 1px solid var(--signal); border-radius: 50%; color: var(--signal-ink); background: var(--signal-soft); font-family: "JetBrains Mono", monospace; font-size: 1cqw; place-items: center; }
+
 /* Slide 4 — Move Control Higher */
 .control-slide {
   display: flex;
@@ -973,7 +1151,7 @@ a:focus-visible {
   text-align: center;
 }
 
-/* Slide 5 — Verification gap */
+/* Slide 6 — Verification gap */
 .verification-chart { position: relative; height: 25cqw; margin: 1cqw 0 0; }
 .verification-chart svg { width: 100%; height: 100%; overflow: visible; }
 .verification-chart path { fill: none; stroke-width: 5; stroke-linecap: round; }
@@ -987,7 +1165,7 @@ a:focus-visible {
 .chart-label-confidence { right: 0; bottom: 2.2cqw; text-align: right; }
 .gap-label { position: absolute; top: 11.5cqw; right: 17cqw; padding: 0.45cqw 0.7cqw; border: 1px solid rgb(224 147 15 / 0.5); border-radius: 4px; color: var(--signal-ink); background: var(--signal-soft); font-family: "JetBrains Mono", monospace; font-size: 1cqw; }
 
-/* Slide 6 — Prompt / Context / Harness / Loop */
+/* Slide 7 — Prompt / Context / Harness / Loop */
 .layers-layout { display: grid; flex: 1; grid-template-columns: 1fr 1.1fr; align-items: center; gap: 5cqw; }
 .nested-rings { position: relative; width: 29cqw; height: 29cqw; margin: 0 auto; }
 .ring { position: absolute; display: flex; border: 0.22cqw solid var(--signal); border-radius: 50%; inset: 0; }
@@ -1003,7 +1181,7 @@ a:focus-visible {
 .layer-definition p { display: grid; grid-template-columns: 7.4cqw 1fr; margin: 0; color: var(--muted); font-size: 1.2cqw; }
 .layer-definition strong { color: var(--heading); font-size: 1.3cqw; }
 
-/* Slide 7 — Three loops */
+/* Slide 8 — Three loops */
 .loop-map { position: relative; display: grid; flex: 1; grid-template-columns: repeat(3, 1fr); align-items: center; gap: 2.5cqw; }
 .loop-map::before { position: absolute; height: 1px; content: ""; background: linear-gradient(90deg, var(--structure), var(--signal)); inset: 50% 12%; }
 .loop-node { position: relative; z-index: 2; display: flex; aspect-ratio: 1; max-width: 20cqw; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto; border: 1px solid var(--hairline-strong); border-radius: 50%; background: var(--card); text-align: center; }
@@ -1018,17 +1196,246 @@ a:focus-visible {
 .loop-product { border-color: var(--signal); box-shadow: 0 0 0 0.28cqw var(--signal-soft); }
 .loops-slide blockquote { margin: 0; color: var(--heading); font-family: Georgia, serif; font-size: 2.15cqw; font-style: italic; text-align: center; }
 
-/* Slide 8 — SDLC verbs */
-.verbs-table { margin-top: 2.2cqw; }
-.verbs-head,
-.verbs-row { display: grid; grid-template-columns: 1fr 1.25fr 1.4fr; align-items: center; }
-.verbs-head { padding: 0 1cqw 0.7cqw; color: var(--muted); font-family: "JetBrains Mono", monospace; font-size: 0.88cqw; text-transform: uppercase; }
-.verbs-row { min-height: 3.15cqw; padding: 0 1cqw; border-top: 1px solid var(--rule); font-size: 1.25cqw; }
-.verbs-row strong { color: var(--heading); font-size: 1.2cqw; }
-.verbs-row span:nth-child(2) { color: var(--muted); }
-.verbs-row span:last-child { color: var(--signal-ink); font-weight: 600; }
+/* Slide 9 — Sequential delivery to a continuous, human-guided loop */
+.sdlc-shift-slide :is(.reveal-in, .reveal-up, .reveal-left, .reveal-right, .reveal-draw) {
+  --reveal-duration: 300ms;
+}
 
-/* Slide 9 — Ownership artifacts */
+.sdlc-shift-slide header { margin-bottom: 0; }
+.sdlc-shift-slide h1 { max-width: 88cqw; font-size: 3.15cqw; line-height: 1.02; }
+.sdlc-shift-slide .slide-lead { max-width: none; margin-top: 0.55cqw; font-size: 1.18cqw; }
+
+.lifecycle-loop {
+  position: relative;
+  height: 10.6cqw;
+  flex: 0 0 auto;
+  margin-top: 0.25cqw;
+}
+
+.lifecycle-flow,
+.lifecycle-connectors,
+.human-gates { position: absolute; inset: 0; }
+
+.lifecycle-connectors {
+  width: 100%;
+  height: 100%;
+  color: var(--signal);
+  overflow: visible;
+}
+
+.lifecycle-connectors line,
+.lifecycle-connectors path {
+  fill: none;
+  stroke: var(--signal);
+  stroke-linecap: round;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.lifecycle-connectors marker path { fill: var(--signal); stroke: none; }
+.lifecycle-return { --draw-length: 1800; }
+
+.lifecycle-stages {
+  position: absolute;
+  top: 2.25cqw;
+  right: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lifecycle-stage {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35cqw;
+}
+
+.lifecycle-icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 2.45cqw;
+  height: 2.45cqw;
+  border: 1px solid var(--signal);
+  border-radius: 50%;
+  color: var(--signal-ink);
+  background: var(--paper);
+  box-shadow: 0 0 0 0.32cqw var(--paper);
+  place-items: center;
+}
+
+.lifecycle-icon svg { width: 1.2cqw; height: 1.2cqw; }
+.lifecycle-stage strong { color: var(--heading); font-size: 1cqw; line-height: 1.1; }
+
+.human-gate {
+  position: absolute;
+  top: 0.05cqw;
+  display: flex;
+  width: 12.4cqw;
+  flex-direction: column;
+  align-items: center;
+  color: var(--signal-ink);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9cqw;
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: center;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.human-gate::after {
+  width: 0.5cqw;
+  height: 0.5cqw;
+  margin-top: 0.28cqw;
+  border: 1px solid var(--paper);
+  background: var(--signal);
+  box-shadow: 0 0 0 1px var(--signal);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.gate-specification { left: 21.4%; }
+.gate-architecture { left: 35.7%; }
+.gate-verification { left: 64.3%; }
+.gate-release { left: 78.6%; }
+
+.gate-feedback {
+  top: auto;
+  bottom: -0.05cqw;
+  left: 72%;
+  flex-direction: column-reverse;
+}
+
+.gate-feedback::after { margin: 0 0 0.28cqw; }
+
+.delivery-comparison {
+  display: grid;
+  min-height: 13.2cqw;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4cqw;
+  margin-top: 0.35cqw;
+}
+
+.delivery-panel {
+  min-width: 0;
+  padding: 1cqw 1.2cqw 0.9cqw;
+  border: 1px solid var(--rule);
+  border-top-width: 0.22cqw;
+  background: color-mix(in srgb, var(--card) 86%, var(--paper));
+}
+
+.traditional-delivery-panel { border-top-color: var(--steel); }
+.ai-native-delivery-panel { border-top-color: var(--signal); background: var(--signal-soft); }
+
+.delivery-panel-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9cqw;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.ai-native-delivery-panel .delivery-panel-kicker { color: var(--signal-ink); }
+
+.delivery-panel-heading {
+  display: flex;
+  min-height: 1.8cqw;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1cqw;
+  margin-top: 0.28cqw;
+}
+
+.delivery-panel h2 { margin: 0; color: var(--heading); font-size: 1.38cqw; line-height: 1.1; }
+
+.traditional-sequence {
+  position: relative;
+  display: grid;
+  width: 12cqw;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+}
+
+.traditional-sequence::before {
+  position: absolute;
+  right: 0.4cqw;
+  left: 0.4cqw;
+  height: 1px;
+  background: var(--steel);
+  content: "";
+}
+
+.traditional-sequence::after {
+  position: absolute;
+  right: 0;
+  width: 0.45cqw;
+  height: 0.45cqw;
+  border-top: 1px solid var(--steel);
+  border-right: 1px solid var(--steel);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.traditional-sequence i {
+  position: relative;
+  z-index: 1;
+  width: 0.65cqw;
+  height: 0.65cqw;
+  justify-self: center;
+  border: 1px solid var(--steel);
+  border-radius: 50%;
+  background: var(--card);
+}
+
+.delivery-loop-icon { width: 1.4cqw; height: 1.4cqw; flex: 0 0 auto; color: var(--signal-ink); }
+
+.delivery-list {
+  display: grid;
+  gap: 0.3cqw;
+  margin: 0.72cqw 0 0;
+  padding: 0;
+  color: var(--ink);
+  font-size: 0.96cqw;
+  line-height: 1.22;
+  list-style: none;
+}
+
+.delivery-list li { position: relative; padding-left: 1cqw; }
+
+.delivery-list li::before {
+  position: absolute;
+  top: 0.43em;
+  left: 0;
+  width: 0.38cqw;
+  height: 0.38cqw;
+  border: 1px solid var(--steel);
+  border-radius: 50%;
+  content: "";
+}
+
+.ai-native-delivery-panel .delivery-list li::before { border-color: var(--signal); background: var(--signal); }
+
+.sdlc-takeaway {
+  margin: 0.65cqw 0 0;
+  padding: 0.8cqw 1.15cqw;
+  border: 1px solid color-mix(in srgb, var(--signal) 52%, var(--rule));
+  border-left: 0.35cqw solid var(--signal);
+  color: var(--graphite);
+  background: var(--signal-soft);
+  font-size: 1.58cqw;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Slide 10 — Ownership artifacts */
 .ownership-slide { padding-left: 7.4cqw; }
 .ownership-slide::before { position: absolute; top: 0; bottom: 0; left: 0; width: 1.1cqw; content: ""; background: linear-gradient(180deg, var(--structure), var(--signal)); }
 .ownership-list { display: flex; flex: 1; flex-direction: column; margin-top: 1.3cqw; }
@@ -1037,7 +1444,7 @@ a:focus-visible {
 .ownership-row strong { color: var(--heading); font-size: 1.25cqw; }
 .ownership-row p { margin: 0; color: var(--muted); font-size: 1.15cqw; }
 
-/* Slide 10 — Start with intent */
+/* Slide 11 — Start with intent */
 .intent-layout { display: grid; flex: 1; grid-template-columns: 0.9fr 1.25fr; align-items: center; gap: 3.5cqw; }
 .intent-layout blockquote { margin: 0; padding: 2.2cqw; border-left: 0.35cqw solid var(--signal); background: var(--card); box-shadow: 0 10px 30px rgb(19 32 56 / 0.07); font-family: Georgia, serif; font-size: 1.75cqw; font-style: italic; line-height: 1.38; }
 .intent-layout blockquote small { display: block; margin-top: 1.6cqw; color: var(--muted); font-family: "JetBrains Mono", monospace; font-size: 0.85cqw; font-style: normal; }
@@ -1047,7 +1454,7 @@ a:focus-visible {
 .acceptance-strip strong { color: var(--signal-ink); font-family: "JetBrains Mono", monospace; text-transform: uppercase; }
 .acceptance-strip span { color: var(--ink); }
 
-/* Slide 11 — Plan. Constrain. Delegate. */
+/* Slide 12 — Plan. Constrain. Delegate. */
 .delegation-columns { display: grid; flex: 1; grid-template-columns: 1fr 1.2fr; gap: 3cqw; margin-top: 2.2cqw; }
 .delegation-columns section { padding: 1.6cqw 1.8cqw; border: 1px solid var(--rule); border-radius: 7px; background: var(--card); }
 .delegation-columns ol,
@@ -1062,7 +1469,7 @@ a:focus-visible {
 .delegation-contract strong { color: var(--heading); font-size: 1.25cqw; }
 .delegation-contract p { margin: 0; color: var(--ink); font-family: "JetBrains Mono", monospace; font-size: 0.95cqw; }
 
-/* Slide 12 — From requirement to release confidence */
+/* Slide 13 — From requirement to release confidence */
 .verify-slide header { margin-bottom: 0; }
 .verify-slide .slide-lead { max-width: 78cqw; }
 .verification-flow {
@@ -1214,7 +1621,7 @@ a:focus-visible {
 }
 .decision-fallback strong { color: var(--heading); font-size: 1.2cqw; }
 
-/* Slide 13 — Change assurance */
+/* Slide 14 — Change assurance */
 .assurance-layout { display: grid; flex: 1; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 6cqw; }
 .assurance-stack { display: flex; flex-direction: column; gap: 0.45cqw; align-items: center; }
 .assurance-stack div { display: flex; min-height: 2.9cqw; align-items: center; padding: 0 1.2cqw; border-left: 0.22cqw solid var(--signal); color: var(--on-dark); background: rgb(255 255 255 / 0.07); font-size: 1.1cqw; }
@@ -1222,7 +1629,7 @@ a:focus-visible {
 .assurance-layout blockquote { margin: 0; color: var(--on-dark-muted); font-family: Georgia, serif; font-size: 1.85cqw; font-style: italic; line-height: 1.35; }
 .assurance-layout blockquote strong { display: block; margin-top: 1.5cqw; color: var(--signal); font-family: "Outfit", sans-serif; font-size: 1.65cqw; font-style: normal; }
 
-/* Slide 14 — Layered skills model */
+/* Slide 15 — Layered skills model */
 .engineer-slide header { margin-bottom: 1.1cqw; }
 .engineer-slide .slide-lead { max-width: none; }
 .engineer-layout {
@@ -1373,7 +1780,7 @@ a:focus-visible {
   font-size: 1cqw;
 }
 
-/* Slide 15 — Monday morning */
+/* Slide 16 — Monday morning */
 .moves-layout { display: grid; flex: 1; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 3.5cqw; }
 .moves-layout ol { margin: 0; padding: 0; list-style: none; }
 .moves-layout li { display: grid; min-height: 3.4cqw; grid-template-columns: 2.5cqw 1fr; align-items: center; padding: 0.45cqw 0.8cqw; border-top: 1px solid var(--rule); color: var(--ink); font-size: 1.18cqw; }
@@ -1390,7 +1797,7 @@ a:focus-visible {
 .measurement-strip { display: flex; align-items: center; justify-content: space-between; margin-top: 1.3cqw; padding: 0.85cqw 1.1cqw; color: var(--on-dark-muted); background: var(--navy); font-size: 0.9cqw; }
 .measurement-strip strong { color: var(--signal); font-family: "JetBrains Mono", monospace; text-transform: uppercase; }
 
-/* Slide 16 — Close */
+/* Slide 17 — Close */
 .close-slide { display: flex; flex-direction: column; justify-content: center; padding-bottom: 12.5cqw; }
 .close-slide .eyebrow { color: rgb(20 25 34 / 0.72); }
 .close-slide h1 { max-width: 70cqw; font-size: 4.5cqw; }
@@ -1440,9 +1847,9 @@ a:focus-visible {
 .timing-card { padding: 16px; border: 1px solid rgb(255 255 255 / 0.1); border-radius: 8px; background: rgb(255 255 255 / 0.04); }
 .presenter-sidebar .section-label { color: var(--signal); font-size: 12px; }
 .next-preview .slide-frame { margin-top: 10px; border-radius: 3px; }
-.presenter-notes { flex: 1; }
+.presenter-notes { min-height: 0; flex: 1; overflow-y: auto; }
 .presenter-notes h2 { margin: 8px 0; font-size: 22px; }
-.presenter-notes > p:last-child { color: #c1c6ce; font-size: 17px; line-height: 1.5; }
+.presenter-notes > p:last-child { color: #c1c6ce; font-size: 17px; line-height: 1.5; white-space: pre-line; }
 .timing-card { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .timing-card div { display: flex; flex-direction: column; }
 .timing-card span { color: var(--steel-soft); font-size: 13px; }

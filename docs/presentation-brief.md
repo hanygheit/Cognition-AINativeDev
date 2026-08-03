@@ -9,7 +9,7 @@ The single source of truth for *what this deck says*. Change this file first whe
 | Title | AI-Native Development: From Writing Code to Owning the Full SDLC |
 | Speaker | Hany Saad — Senior Engineering Manager, ITWorx |
 | Event | CognitionX Egypt, 3 August 2026 |
-| Length | ~28 minutes, 16 slides |
+| Length | 28:45 planned, 17 slides |
 | Audience | Mixed-seniority engineers, tech leads, engineering managers |
 
 ## Approved thesis
@@ -22,12 +22,13 @@ Every slide must visibly serve this thesis. If a slide can be removed without we
 
 1. AI productivity results are **conditional**, not universal.
 2. The bottleneck moved from *writing* to *verifying*.
-3. Delegation quality is a stack: **Prompt → Context → Harness → Loop**.
-4. The inner loop got fast; leverage moved to the outer loops.
-5. The SDLC did not disappear — the verbs changed.
-6. Ownership is expressed through accountable artifacts.
-7. Code review is necessary but no longer sufficient.
-8. AI fluency builds on engineering maturity; implementation fluency still matters.
+3. The right AI mode depends on task scope and required oversight.
+4. Delegation quality is a stack: **Prompt → Context → Harness → Loop**.
+5. The inner loop got fast; leverage moved to the outer loops.
+6. The SDLC remains; sequential handoffs become continuous, human-guided loops.
+7. Ownership is expressed through accountable artifacts.
+8. Code review is necessary but no longer sufficient.
+9. AI fluency builds on engineering maturity; implementation fluency still matters.
 
 ## Locked slide order
 
@@ -37,20 +38,21 @@ Every slide must visibly serve this thesis. If a slide can be removed without we
 | 2 | `your-name-is-on-the-release` | Opens on the release decision: generated implementation does not transfer ownership. |
 | 3 | `the-bottleneck-moved` | Names the new bottleneck: confidence, not creation. |
 | 4 | `move-control-higher` | Moves engineering control from code toward behavior, architecture, risk, and outcome. |
-| 5 | `conditions-change-outcomes` | Two real, opposite results. Productivity is conditional. |
-| 6 | `four-layers` | The delegation model: Prompt → Context → Harness → Loop. |
-| 7 | `three-loops` | Agent / engineering / product loops and their clocks. |
-| 8 | `sdlc-verbs` | The lifecycle stayed; the verbs changed. |
-| 9 | `full-sdlc-ownership` | Ownership made concrete as seven accountable artifacts. |
-| 10 | `start-with-intent` | Walkthrough part 1 — specification is engineering work. |
-| 11 | `plan-constrain-delegate` | Walkthrough part 2 — challenge the plan, set the contract. |
-| 12 | `verify-the-system` | Walkthrough part 3 — trace the requirement through change assurance to a release decision. |
-| 13 | `change-assurance` | Code review → change assurance. |
-| 14 | `engineer-stack` | A layered skills model from software fundamentals to end-to-end ownership. |
-| 15 | `monday-morning` | Five concrete actions. |
-| 16 | `own-the-outer-loops` | Close on the thesis, then stop. |
+| 5 | `right-ai-for-the-task` | Applies AI modes through task fit, risk, controls, and retained accountability. |
+| 6 | `conditions-change-outcomes` | Two real, opposite results. Productivity is conditional. |
+| 7 | `four-layers` | The delegation model: Prompt → Context → Harness → Loop. |
+| 8 | `three-loops` | Agent / engineering / product loops and their clocks. |
+| 9 | `sdlc-verbs` | The lifecycle remains while execution becomes a continuous, human-guided loop. |
+| 10 | `full-sdlc-ownership` | Ownership made concrete as seven accountable artifacts. |
+| 11 | `start-with-intent` | Walkthrough part 1 — specification is engineering work. |
+| 12 | `plan-constrain-delegate` | Walkthrough part 2 — challenge the plan, set the contract. |
+| 13 | `verify-the-system` | Walkthrough part 3 — trace the requirement through change assurance to a release decision. |
+| 14 | `change-assurance` | Code review → change assurance. |
+| 15 | `engineer-stack` | A layered skills model from software fundamentals to end-to-end ownership. |
+| 16 | `monday-morning` | Five concrete actions. |
+| 17 | `own-the-outer-loops` | Close on the thesis, then stop. |
 
-**Do not** add, remove, reorder, or materially rewrite these 16 slides without explicit approval from the speaker.
+**Do not** add, remove, reorder, or materially rewrite these 17 slides without explicit approval from the speaker.
 
 ## Evidence rules
 
@@ -70,5 +72,5 @@ Prefer "in that study" over "research proves". Prefer "requires" over "must alwa
 Notes live in `src/data/slides.ts` and are **data, not slide content**. They must:
 
 - restate the point the speaker makes out loud, not the words already on screen;
-- fit in 1–2 sentences;
+- usually fit in 1–2 sentences; slide 4 is the approved extended walkthrough and transition;
 - never appear in audience mode output or in the PDF.
