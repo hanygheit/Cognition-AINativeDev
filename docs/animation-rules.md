@@ -44,7 +44,7 @@ Base delay `0ms`, step `70–110ms`, hard cap `900ms` for the last element. Slid
 | 1 | Eyebrow → title → subhead → quote → pillars → footer |
 | 2 | Opening line → ownership line → release card → successful checks → risks → decision focus → thesis |
 | 3 | Title → generation statement → shift line → verification statement → bottleneck |
-| 4 | Control statement → levels from code to outcome → orchestrator line |
+| 4 | Control statement → implementation-to-outcome progression → ownership line |
 | 5 | Title and subtitle → Vibe Coding → AI-Assisted Coding → AI Coding Agents → responsibility statement |
 | 6 | Two evidence panels fade in, divider draws, question line last |
 | 7 | Rings appear inside-out, definitions follow top to bottom |

@@ -43,8 +43,23 @@ export const slides: SlideDefinition[] = [
     title: "Move Control Higher",
     durationSeconds: 45,
     theme: "paper",
-    notes:
-      "Control does not disappear when implementation is delegated. It moves outward to behavior, architecture, risk, and business outcomes.",
+    notes: `When AI generated twenty lines, reviewing those twenty lines was a reasonable control.
+
+But when an agent changes multiple files, introduces dependencies, updates interfaces, generates tests, and prepares a release, line-by-line review cannot be the only control.
+
+We still review critical code. But we also ask broader questions.
+
+Does the behavior satisfy the requirement?
+Are the architecture and data flows still sound?
+Did the change introduce security or operational risk?
+Can we observe it, reverse it, and support it in production?
+And ultimately, did it deliver the intended outcome?
+
+Moving control higher does not mean giving up control. It means expanding engineering judgment from the implementation to the complete change.
+
+Review the implementation. Control the system. Own the outcome.
+
+And this broader responsibility changes how work moves through the entire software-development lifecycle.`,
   },
   {
     id: 5,

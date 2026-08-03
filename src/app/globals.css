@@ -1076,78 +1076,221 @@ a:focus-visible {
 .control-slide {
   display: flex;
   flex-direction: column;
-  padding-left: 7.2cqw;
-  padding-bottom: 8.5cqw;
 }
 
-.control-rail {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 1.1cqw;
-  background: linear-gradient(180deg, var(--structure), var(--signal));
+.control-slide :is(.reveal-in, .reveal-up, .reveal-draw) {
+  --reveal-duration: 320ms;
 }
 
 .control-slide h1 {
-  max-width: 78cqw;
+  position: relative;
+  z-index: 2;
+  max-width: 90cqw;
   margin: 0;
   color: var(--heading);
-  font-size: 3.45cqw;
+  font-size: 3.2cqw;
   font-weight: 600;
-  line-height: 1.08;
+  line-height: 1.04;
 }
 
 .control-slide h1 span {
   display: block;
-  margin-top: 0.45cqw;
-  color: var(--structure);
+  margin-top: 0.35cqw;
+  color: var(--signal);
 }
 
-.control-levels {
+.control-progression {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 1cqw;
+}
+
+.control-scope-row {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: auto 0;
+  gap: 2cqw;
+}
+
+.control-scope-label,
+.control-review-note {
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  line-height: 1.25;
+}
+
+.control-scope-label {
+  color: var(--structure);
+  font-size: 0.92cqw;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.control-review-note {
+  display: flex;
+  align-items: center;
+  gap: 0.55cqw;
+  color: var(--steel);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.02cqw;
+  font-weight: 500;
+}
+
+.control-review-note svg {
+  width: 1.25cqw;
+  height: 1.25cqw;
+  flex: 0 0 auto;
+  color: var(--structure);
+  stroke-width: 1.9;
+}
+
+.control-path {
+  position: relative;
+  min-height: 20cqw;
+  flex: 1;
+  margin-top: 0.35cqw;
+}
+
+.control-scope-arc {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  inset: 0;
+}
+
+.control-scope-arc path {
+  fill: none;
+  stroke: var(--structure);
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.control-scope-arc-outer {
+  opacity: 0.14;
+  stroke-width: 7;
+}
+
+.control-scope-arc-inner {
+  opacity: 0.08;
+  stroke-width: 3;
+}
+
+.control-levels {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.3cqw;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.control-levels li {
+.control-stage {
+  --stage-color: var(--structure);
+  --stage-height: 8.7cqw;
+  --stage-icon: 2.1cqw;
+  --stage-rise: 0cqw;
+  --arrow-rise: 4.9cqw;
+
+  position: relative;
   display: flex;
-  flex: 1;
-  align-items: center;
-  color: var(--structure);
+  min-width: 0;
+  align-items: flex-end;
+  padding-bottom: var(--stage-rise);
 }
 
-.control-levels span {
-  padding: 0.8cqw 0;
-  border-bottom: 0.22cqw solid currentcolor;
-  color: inherit;
-  font-size: 1.55cqw;
-  font-weight: 600;
+.control-stage:nth-child(2) {
+  --stage-height: 9.6cqw;
+  --stage-icon: 2.3cqw;
+  --stage-rise: 1.15cqw;
+  --arrow-rise: 6.7cqw;
 }
 
-.control-levels b {
-  flex: 1;
-  color: var(--steel-soft);
-  font-size: 1.6cqw;
-  font-weight: 400;
-  text-align: center;
+.control-stage:nth-child(3) {
+  --stage-height: 10.5cqw;
+  --stage-icon: 2.5cqw;
+  --stage-rise: 2.3cqw;
+  --arrow-rise: 8.5cqw;
 }
 
-.control-levels li:last-child {
+.control-stage:nth-child(4) {
+  --stage-height: 11.4cqw;
+  --stage-icon: 2.7cqw;
+  --stage-rise: 3.45cqw;
+  --arrow-rise: 10.3cqw;
+}
+
+.control-stage:nth-child(5) {
+  --stage-color: var(--signal);
+  --stage-height: 12.3cqw;
+  --stage-icon: 2.9cqw;
+  --stage-rise: 4.6cqw;
+}
+
+.control-stage-content {
+  display: flex;
+  width: 100%;
+  min-height: var(--stage-height);
+  flex-direction: column;
+  padding: 0.75cqw 0.65cqw 0.45cqw 0.9cqw;
+  border-top: 0.14cqw solid var(--stage-color);
+  border-left: 0.14cqw solid var(--stage-color);
+}
+
+.control-stage-icon {
+  width: var(--stage-icon);
+  height: var(--stage-icon);
+  flex: 0 0 auto;
+  margin-bottom: 0.55cqw;
+  color: var(--stage-color);
+}
+
+.control-stage h2 {
+  margin: 0;
+  color: var(--heading);
+  font-size: 1.25cqw;
+  font-weight: 650;
+  line-height: 1.08;
+}
+
+.control-stage p {
+  margin: 0.45cqw 0 0;
+  color: var(--steel);
+  font-size: 0.98cqw;
+  line-height: 1.2;
+}
+
+.control-stage:last-child h2 {
   color: var(--signal-ink);
+}
+
+.control-stage-arrow {
+  position: absolute;
+  z-index: 3;
+  right: -1.85cqw;
+  bottom: var(--arrow-rise);
+  width: 2.35cqw;
+  height: 2.35cqw;
+  color: var(--steel-soft);
 }
 
 .control-close {
   margin: 0;
-  padding-top: 1.4cqw;
-  border-top: 1px solid var(--rule);
+  padding-top: 0.8cqw;
+  border-top: 0.08cqw solid var(--rule);
   color: var(--heading);
-  font-family: Georgia, serif;
-  font-size: 2.25cqw;
-  font-style: italic;
+  font-size: 2.05cqw;
+  font-weight: 600;
+  line-height: 1.15;
   text-align: center;
 }
 

@@ -37,7 +37,7 @@ Every slide must visibly serve this thesis. If a slide can be removed without we
 | 1 | `ai-native-development` | Title and thesis. Frames a role-evolution talk, not a tools talk. |
 | 2 | `your-name-is-on-the-release` | Opens on the release decision: generated implementation does not transfer ownership. |
 | 3 | `the-bottleneck-moved` | Names the new bottleneck: confidence, not creation. |
-| 4 | `move-control-higher` | Moves engineering control from code toward behavior, architecture, risk, and outcome. |
+| 4 | `move-control-higher` | Expands engineering control from implementation through system behavior, architecture, delivery risk, and business outcome while retaining code review. |
 | 5 | `right-ai-for-the-task` | Applies AI modes through task fit, risk, controls, and retained accountability. |
 | 6 | `conditions-change-outcomes` | Two real, opposite results. Productivity is conditional. |
 | 7 | `four-layers` | The delegation model: Prompt → Context → Harness → Loop. |
