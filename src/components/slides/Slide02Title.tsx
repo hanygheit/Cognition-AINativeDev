@@ -12,7 +12,7 @@ export function Slide02Title() {
         From Writing Code to Owning the Full SDLC
       </p>
       <blockquote className="reveal-up" style={revealDelay(360)}>
-        A role-evolution talk, not a tools talk.
+        How Engineers Direct, Verify, and Own AI-Assisted Delivery
       </blockquote>
       <p className="title-pillars reveal-in" style={revealDelay(500)}>
         Direction · Constraints · Evidence · Outcomes
