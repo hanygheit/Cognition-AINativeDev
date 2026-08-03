@@ -545,7 +545,7 @@ a:focus-visible {
 .keyboard-help dt { color: var(--signal); font-family: "JetBrains Mono", monospace; font-size: 14px; }
 .keyboard-help dd { margin: 0; font-size: 15px; }
 
-/* Slide 1 — One Promise. Two Outcomes. */
+/* Slide 2 — One Promise. Two Outcomes. */
 .outcomes-slide {
   display: flex;
   flex-direction: column;
@@ -605,7 +605,7 @@ a:focus-visible {
 .outcomes-divider { height: 22cqw; background: var(--hairline-strong); }
 .outcomes-question { margin: 0; padding-top: 1.8cqw; border-top: 1px solid var(--rule); color: var(--heading); font-size: 1.75cqw; font-weight: 500; text-align: center; }
 
-/* Slide 2 — Title */
+/* Slide 1 — Title */
 .title-slide {
   display: flex;
   flex-direction: column;
@@ -805,9 +805,9 @@ a:focus-visible {
 }
 
 .overview-page > header { display: flex; align-items: flex-end; justify-content: space-between; max-width: 1500px; margin: 0 auto 32px; }
-.overview-page h1 { margin: 0; color: var(--navy); font-size: 46px; }
-.overview-page .eyebrow { color: var(--signal-ink); font-size: 13px; }
-.overview-page .eyebrow::before { width: 26px; margin-right: 10px; }
+.overview-page > header h1 { margin: 0; color: var(--navy); font-size: 46px; }
+.overview-page > header .eyebrow { color: var(--signal-ink); font-size: 13px; }
+.overview-page > header .eyebrow::before { width: 26px; margin-right: 10px; }
 .overview-page > header > a { padding: 12px 18px; border-radius: 999px; color: var(--graphite); background: var(--signal); font-weight: 600; text-decoration: none; }
 .overview-grid { display: grid; max-width: 1500px; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 22px; margin: 0 auto; }
 .overview-item { position: relative; color: inherit; }
@@ -865,7 +865,7 @@ a:focus-visible {
   .presenter-controls { bottom: 8px; max-width: calc(100vw - 16px); overflow-x: auto; }
   .overview-page { padding: 28px 16px 56px; }
   .overview-page > header { align-items: flex-start; gap: 18px; }
-  .overview-page h1 { font-size: 32px; }
+  .overview-page > header h1 { font-size: 32px; }
   .overview-grid { grid-template-columns: 1fr; }
   .presenter-page { padding: 12px 12px 74px; }
   .presenter-sidebar { display: flex; }

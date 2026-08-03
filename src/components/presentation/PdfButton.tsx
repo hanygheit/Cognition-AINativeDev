@@ -63,9 +63,10 @@ export function PdfButton() {
     <button
       aria-label={state === "error" ? "Retry PDF generation" : "Generate PDF"}
       className="control-button pdf-button"
+      data-state={state}
       disabled={state === "loading"}
       onClick={generatePdf}
-      title="Generate PDF"
+      title={buttonLabel}
       type="button"
     >
       {state === "error" ? <RefreshCw aria-hidden="true" /> : <Download aria-hidden="true" />}

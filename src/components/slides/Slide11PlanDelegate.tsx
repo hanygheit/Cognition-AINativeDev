@@ -1,3 +1,5 @@
+import { revealDelay } from "@/lib/utils";
+
 const plan = [
   "Add waitlist storage",
   "Update check-in endpoint",
@@ -18,20 +20,28 @@ export function Slide11PlanDelegate() {
   return (
     <div className="standard-slide delegation-slide">
       <header>
-        <p className="eyebrow">Challenge the plan before accepting the work</p>
-        <h1>Plan. Constrain. Delegate.</h1>
+        <p className="eyebrow reveal-in">Challenge the plan before accepting the work</p>
+        <h1 className="reveal-up" style={revealDelay(70)}>Plan. Constrain. Delegate.</h1>
       </header>
       <div className="delegation-columns">
-        <section>
+        <section className="reveal-up" style={revealDelay(200)}>
           <span className="section-label">Agent’s proposed plan</span>
-          <ol>{plan.map((item) => <li key={item}>{item}</li>)}</ol>
+          <ol>
+            {plan.map((item, index) => (
+              <li className="reveal-in" key={item} style={revealDelay(300 + index * 70)}>{item}</li>
+            ))}
+          </ol>
         </section>
-        <section className="redline-section">
+        <section className="redline-section reveal-up" style={revealDelay(680)}>
           <span className="section-label">Human review</span>
-          <ul>{redlines.map((item) => <li key={item}>{item}</li>)}</ul>
+          <ul>
+            {redlines.map((item, index) => (
+              <li className="reveal-in" key={item} style={revealDelay(780 + index * 70)}>{item}</li>
+            ))}
+          </ul>
         </section>
       </div>
-      <div className="delegation-contract">
+      <div className="delegation-contract reveal-up" style={revealDelay(1180)}>
         <strong>Delegation contract</strong>
         <p>bounded tasks · affected interfaces · tests required · permissions allowed · stop / escalation conditions</p>
       </div>

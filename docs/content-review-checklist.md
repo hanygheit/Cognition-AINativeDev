@@ -20,7 +20,7 @@ Run this per slide before declaring content work complete. Source of truth for t
 - [ ] Terminology is consistent: *mode*, *loop*, *layer*, *artifact*, *evidence*, *delegation contract*, *change assurance*. One term per concept, deck-wide.
 - [ ] The five modes are named identically on slides 3 and 4.
 - [ ] The walkthrough (10 → 11 → 12) uses one continuous example: session capacity and waitlist.
-- [ ] Slide 1 numbers and slide 5 argument do not contradict each other.
+- [ ] Slide 2 numbers and slide 5 argument do not contradict each other.
 - [ ] Slide 15 actions are all doable by one engineer in one week.
 - [ ] Slide 16 restates the thesis verbatim in spirit, then stops.
 - [ ] Total spoken duration in `durationSeconds` sums to the session length.

@@ -13,6 +13,18 @@ npm run dev
 
 Open `http://localhost:3000`; the root redirects to slide 1.
 
+## Project Rules
+
+`AGENTS.md` is the canonical contract for humans and AI agents. It indexes the supporting documents:
+
+- `docs/presentation-brief.md` — thesis, locked 16-slide order, evidence framing
+- `docs/design-system.md` — themes, tokens, typography, layout
+- `docs/animation-rules.md` — reveal system and approved per-slide sequences
+- `docs/content-review-checklist.md` — per-slide content bar
+- `docs/qa-checklist.md` — release verification steps
+- `docs/pdf-generation.md` — PDF pipeline contract
+- `skills/` — review workflows for deck, single-slide design, and content accuracy
+
 ## Routes
 
 - `/present/1` through `/present/16` — audience presentation

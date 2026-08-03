@@ -48,7 +48,7 @@ Declared in `src/app/globals.css` under `:root`. Use tokens, never raw hex, insi
 
 | Role | Size | Notes |
 | --- | --- | --- |
-| Hero title (slides 2, 4) | `4.8–5.5cqw` | One idea only |
+| Hero title (slides 1, 4) | `4.8–5.5cqw` | One idea only |
 | Slide title `h1` | `3.5cqw` | Max two lines |
 | Eyebrow | `1cqw` mono, uppercase | One short phrase |
 | Lead / pull line | `1.55cqw` | The takeaway sentence |
@@ -59,7 +59,7 @@ Redesign the slide rather than shrinking core text below these sizes.
 
 ## Layout
 
-- Slide padding: `4.2cqw` vertical, `5cqw` horizontal. Do not vary per slide.
+- Slide padding: `4.4cqw` vertical, `5cqw` horizontal. Do not vary per slide.
 - Rhythm: header → one dominant visual → one takeaway line. Nothing else competes.
 - Generous whitespace. A slide should read in five seconds.
 - Prefer one diagram over a grid of cards. Repeated card grids are a smell.

@@ -21,8 +21,8 @@ import { Slide15Monday } from "./Slide15Monday";
 import { Slide16Close } from "./Slide16Close";
 
 const slideComponents: Record<number, ComponentType> = {
-  1: Slide01TwoOutcomes,
-  2: Slide02Title,
+  1: Slide02Title,
+  2: Slide01TwoOutcomes,
   3: Slide03Modes,
   4: Slide04Audience,
   5: Slide05VerificationGap,
@@ -39,11 +39,11 @@ const slideComponents: Record<number, ComponentType> = {
   16: Slide16Close,
 };
 
-type RenderSlideProps = {
+type RenderSlideProps = Readonly<{
   id: number;
   compact?: boolean;
   className?: string;
-};
+}>;
 
 export function RenderSlide({ id, compact, className }: RenderSlideProps) {
   const slide = getSlide(id);

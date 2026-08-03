@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { RenderSlide } from "@/components/slides";
 import { getSlide, SLIDE_COUNT } from "@/data/slides";
@@ -16,6 +16,9 @@ type PresentationShellProps = {
 type NavigationRouter = {
   push: (href: string) => void;
 };
+
+const controlsIdleMs = 3000;
+const numberBufferIdleMs = 1400;
 
 async function toggleFullscreen() {
   if (document.fullscreenElement) {
@@ -40,8 +43,23 @@ export function PresentationShell({ slideId }: PresentationShellProps) {
   const [numberBuffer, setNumberBuffer] = useState("");
   const pointerStart = useRef<number | null>(null);
   const controlsTimer = useRef<number | null>(null);
+  const numberBufferTimer = useRef<number | null>(null);
   const numberBufferRef = useRef("");
   const slide = getSlide(slideId);
+
+  const revealControls = useCallback(() => {
+    setControlsActive(true);
+    if (controlsTimer.current) window.clearTimeout(controlsTimer.current);
+    controlsTimer.current = window.setTimeout(() => setControlsActive(false), controlsIdleMs);
+  }, []);
+
+  /** Hide the control bar on its own, even if the presenter never moves the pointer. */
+  useEffect(() => {
+    controlsTimer.current = window.setTimeout(() => setControlsActive(false), controlsIdleMs);
+    return () => {
+      if (controlsTimer.current) window.clearTimeout(controlsTimer.current);
+    };
+  }, []);
 
   useEffect(() => {
     const timer = window.setInterval(() => setElapsedSeconds((seconds) => seconds + 1), 1000);
@@ -57,24 +75,35 @@ export function PresentationShell({ slideId }: PresentationShellProps) {
       navigateToSlide(router, slideId, target);
     }
 
+    function clearNumberBuffer() {
+      numberBufferRef.current = "";
+      setNumberBuffer("");
+    }
+
     function handleKeyDown(event: KeyboardEvent) {
       if (
         event.target instanceof HTMLElement &&
         event.target.matches("input, textarea, select")
       ) return;
 
+      revealControls();
+
+      if (numberBufferTimer.current) window.clearTimeout(numberBufferTimer.current);
+
       if (/^\d$/.test(event.key)) {
         numberBufferRef.current = `${numberBufferRef.current}${event.key}`.slice(-2);
         setNumberBuffer(numberBufferRef.current);
+        numberBufferTimer.current = window.setTimeout(clearNumberBuffer, numberBufferIdleMs);
         return;
       }
 
       if (event.key === "Enter" && numberBufferRef.current) {
         navigateTo(Number(numberBufferRef.current));
-        numberBufferRef.current = "";
-        setNumberBuffer("");
+        clearNumberBuffer();
         return;
       }
+
+      clearNumberBuffer();
 
       const navigationTargets: Record<string, number> = {
         ArrowRight: slideId + 1,
@@ -108,14 +137,11 @@ export function PresentationShell({ slideId }: PresentationShellProps) {
     }
 
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [router, slideId]);
-
-  function revealControls() {
-    setControlsActive(true);
-    if (controlsTimer.current) window.clearTimeout(controlsTimer.current);
-    controlsTimer.current = window.setTimeout(() => setControlsActive(false), 3000);
-  }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      if (numberBufferTimer.current) window.clearTimeout(numberBufferTimer.current);
+    };
+  }, [revealControls, router, slideId]);
 
   function finishSwipe(clientX: number) {
     if (pointerStart.current === null) return;
@@ -134,7 +160,7 @@ export function PresentationShell({ slideId }: PresentationShellProps) {
       onPointerUp={(event) => finishSwipe(event.clientX)}
     >
       <RenderSlide id={slideId} />
-      {numberBuffer && <div className="number-jump" aria-live="polite">Jump to {numberBuffer}</div>}
+      {numberBuffer && <div aria-live="polite" className="number-jump">Jump to slide {numberBuffer}</div>}
       {showNotes && <aside className="audience-notes"><strong>Speaker notes</strong><p>{slide.notes}</p></aside>}
       <div className={controlsActive ? "controls-visible" : "controls-hidden"}>
         <PresenterControls

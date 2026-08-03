@@ -1,17 +1,21 @@
 import Image from "next/image";
 
+import { revealDelay } from "@/lib/utils";
+
 export function Slide16Close() {
   return (
     <div className="close-slide">
-      <div className="arc-motif arc-motif-close" aria-hidden="true" />
-      <p className="eyebrow">Own the outer loops</p>
-      <h1>You are the orchestrator—not the typist.</h1>
-      <p className="close-secondary">The inner loop got fast. Own the outer loops.</p>
-      <blockquote>
+      <div aria-hidden="true" className="arc-motif arc-motif-close reveal-scale" style={revealDelay(240)} />
+      <p className="eyebrow reveal-in">Own the outer loops</p>
+      <h1 className="reveal-up" style={revealDelay(90)}>You are the orchestrator—not the typist.</h1>
+      <p className="close-secondary reveal-up" style={revealDelay(240)}>
+        The inner loop got fast. Own the outer loops.
+      </p>
+      <blockquote className="reveal-up" style={revealDelay(400)}>
         <span>AI-native development is not about producing more code.</span>
         <strong>It is about owning the system that turns intent into reliable outcomes.</strong>
       </blockquote>
-      <footer>
+      <footer className="reveal-up" style={revealDelay(560)}>
         <Image
           alt="Speaker portrait placeholder for Hany Saad"
           className="speaker-portrait"

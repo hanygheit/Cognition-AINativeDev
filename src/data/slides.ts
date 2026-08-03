@@ -13,6 +13,14 @@ export type SlideDefinition = {
 export const slides: SlideDefinition[] = [
   {
     id: 1,
+    slug: "ai-native-development",
+    title: "AI-Native Development",
+    durationSeconds: 45,
+    theme: "dark",
+    notes: "Set expectations: this is a role-evolution talk, not a tools talk. No product demos today.",
+  },
+  {
+    id: 2,
     slug: "one-promise-two-outcomes",
     title: "One Promise. Two Outcomes.",
     durationSeconds: 90,
@@ -20,14 +28,6 @@ export const slides: SlideDefinition[] = [
     notes:
       "Say both numbers once, then move to conditions: task structure, repository maturity, prior knowledge, workflow, verification. Do not pick a winning study.",
     sources: ["peng-2023", "metr-2025"],
-  },
-  {
-    id: 2,
-    slug: "ai-native-development",
-    title: "AI-Native Development",
-    durationSeconds: 45,
-    theme: "dark",
-    notes: "Set expectations: this is a role-evolution talk, not a tools talk. No product demos today.",
   },
   {
     id: 3,

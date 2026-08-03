@@ -33,8 +33,8 @@ Every slide must visibly serve this thesis. If a slide can be removed without we
 
 | # | Slug | Purpose in the narrative |
 | --- | --- | --- |
-| 1 | `one-promise-two-outcomes` | Cold open. Two real, opposite results. Productivity is conditional. |
-| 2 | `ai-native-development` | Title and thesis. Frames a role-evolution talk, not a tools talk. |
+| 1 | `ai-native-development` | Title and thesis. Frames a role-evolution talk, not a tools talk. |
+| 2 | `one-promise-two-outcomes` | Two real, opposite results. Productivity is conditional. |
 | 3 | `five-modes` | Shared vocabulary: five operating modes by autonomy and control. |
 | 4 | `where-are-you` | Audience calibration moment against those five modes. |
 | 5 | `verification-gap` | Names the new bottleneck: confidence, not creation. |

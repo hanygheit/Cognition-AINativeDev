@@ -41,8 +41,8 @@ Base delay `0ms`, step `70–110ms`, hard cap `900ms` for the last element. Slid
 
 | Slide | Sequence |
 | --- | --- |
-| 1 | Two evidence panels fade in, divider draws, question line last |
-| 2 | Eyebrow → title → subhead → quote → pillars → footer |
+| 1 | Eyebrow → title → subhead → quote → pillars → footer |
+| 2 | Two evidence panels fade in, divider draws, question line last |
 | 3 | Five mode columns left to right, then the control-strength arrow |
 | 4 | Title, then the five options left to right |
 | 5 | Axes → generation line draws → confidence line draws → gap fill → gap label |
@@ -53,7 +53,7 @@ Base delay `0ms`, step `70–110ms`, hard cap `900ms` for the last element. Slid
 | 10 | Request → questions → acceptance strip |
 | 11 | Plan column → redline column → delegation contract |
 | 12 | Evidence items in order → release status → pull line |
-| 13 | Assurance layers build bottom-up, quote last |
+| 13 | Assurance layers reveal top to bottom, quote last |
 | 14 | Capability stem → capability top → roles |
 | 15 | Five moves in order, aside and measurement strip last |
 | 16 | Eyebrow → thesis → secondary → closing quote → footer band |
