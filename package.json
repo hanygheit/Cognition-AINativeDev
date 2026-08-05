@@ -1,6 +1,7 @@
 {
   "name": "cognition-ai-native-dev",
   "version": "0.1.0",
+  "description": "18-slide conference presentation — AI-Native Development: From Writing Code to Owning the Full SDLC. Built with Next.js 16, React 19, TypeScript, and Tailwind CSS. Includes server-side PDF generation via Playwright.",
   "private": true,
   "scripts": {
     "dev": "next dev",
